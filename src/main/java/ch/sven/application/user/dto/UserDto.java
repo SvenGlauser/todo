@@ -10,6 +10,15 @@ import lombok.Setter;
 public class UserDto extends Dto<User> {
     private String username;
 
+    public UserDto() {
+        // Reste vide
+    }
+
+    public UserDto(User user) {
+        super(user);
+        this.username = user.getUsername();
+    }
+
     @Override
     public User toDomaineEntity() {
         User user = new User();

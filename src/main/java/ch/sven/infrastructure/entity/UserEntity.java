@@ -7,7 +7,9 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -20,6 +22,25 @@ public class UserEntity extends Dao<User> {
 
     @Column(name = "PASSWORD")
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    private Set<TaskEntity> taskEntitySet;
+
+    /**
+     * Constructeur non paramétré
+     */
+    public UserEntity() {
+        // Reste vide
+    }
+
+    /**
+     * Constructeur paramétré
+     */
+    public UserEntity(User user) {
+        super(user);
+        this.username = user.getUsername();
+        this.password = user.getPassword();
+    }
 
     @Override
     public User toDomaineEntity() {

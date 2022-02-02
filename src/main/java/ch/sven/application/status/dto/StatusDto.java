@@ -13,6 +13,16 @@ public class StatusDto extends Dto<Status> {
     private String statusName;
     private String statusDescription;
 
+    public StatusDto() {
+        // Reste vide
+    }
+
+    public StatusDto(Status status) {
+        super(status);
+        this.statusName = status.getStatusName();
+        this.statusDescription = status.getStatusDescription();
+    }
+
     @Override
     public Status toDomaineEntity() {
         Status status = new Status();
