@@ -2,8 +2,6 @@ package ch.sven.application.status.dto;
 
 import ch.sven.application.common.Dto;
 import ch.sven.domain.status.model.Status;
-import ch.sven.domain.task.model.Task;
-import ch.sven.domain.user.model.User;
 import lombok.Getter;
 import lombok.Setter;
 

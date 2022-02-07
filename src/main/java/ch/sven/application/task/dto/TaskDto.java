@@ -3,10 +3,7 @@ package ch.sven.application.task.dto;
 import ch.sven.application.common.Dto;
 import ch.sven.application.status.dto.StatusDto;
 import ch.sven.application.user.dto.UserDto;
-import ch.sven.domain.status.model.Status;
 import ch.sven.domain.task.model.Task;
-import ch.sven.domain.user.model.User;
-import ch.sven.infrastructure.entity.UserEntity;
 import lombok.Getter;
 import lombok.Setter;
 
