@@ -2,7 +2,6 @@ package ch.sven.application.status.web;
 
 import ch.sven.application.configuration.ApiConfig;
 import ch.sven.domain.status.model.Status;
-import ch.sven.domain.task.model.Task;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
