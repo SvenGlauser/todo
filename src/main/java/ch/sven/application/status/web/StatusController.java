@@ -1,19 +1,24 @@
 package ch.sven.application.status.web;
 
 import ch.sven.application.configuration.ApiConfig;
-import ch.sven.domain.status.model.Status;
-import org.springframework.stereotype.Controller;
+import ch.sven.application.status.dto.StatusDto;
+import ch.sven.application.status.service.StatusServiceApplicationImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Set;
+import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(name = ApiConfig.API_URL)
 public class StatusController {
 
+    @Autowired
+    private StatusServiceApplicationImpl statusServiceApplication;
+
     @GetMapping("/status")
-    public Set<Status> listStatus() {
-        return null;
+    public List<StatusDto> listStatus() {
+        return statusServiceApplication.findAll();
     }
 }
