@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(name = ApiConfig.API_URL)
+@RequestMapping(value = ApiConfig.API_URL)
 public class TaskController {
 
     @Autowired
     private TaskServiceApplicationImpl taskServiceApplication;
 
-    @GetMapping("/tasks")
+    @GetMapping(path = "/tasks")
     public List<TaskDto> listTask() {
         return taskServiceApplication.findAll();
     }

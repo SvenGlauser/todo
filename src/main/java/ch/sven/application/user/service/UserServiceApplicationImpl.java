@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -17,5 +18,10 @@ public class UserServiceApplicationImpl implements UserServiceApplication {
     @Override
     public List<UserDto> findAll() {
         return userService.findAll().stream().map(UserDto::new).collect(Collectors.toList());
+    }
+
+    @Override
+    public UserDto createUser(UserDto userDto) {
+        return Optional.ofNullable(userService.createUser(userDto.toDomaine())).map(UserDto::new).orElse(null);
     }
 }
