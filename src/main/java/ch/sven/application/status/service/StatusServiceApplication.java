@@ -7,4 +7,6 @@ import java.util.List;
 public interface StatusServiceApplication {
 
     List<StatusDto> findAll();
+
+    StatusDto createStatus(StatusDto statusDto);
 }

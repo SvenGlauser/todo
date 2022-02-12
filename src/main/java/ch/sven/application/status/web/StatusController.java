@@ -4,9 +4,7 @@ import ch.sven.application.configuration.ApiConfig;
 import ch.sven.application.status.dto.StatusDto;
 import ch.sven.application.status.service.StatusServiceApplicationImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,10 @@ public class StatusController {
     @GetMapping("/status")
     public List<StatusDto> listStatus() {
         return statusServiceApplication.findAll();
+    }
+
+    @PostMapping("/status")
+    public StatusDto createStatus(@RequestBody StatusDto statusDto) {
+        return statusServiceApplication.createStatus(statusDto);
     }
 }

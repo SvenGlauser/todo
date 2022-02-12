@@ -1,6 +1,7 @@
 package ch.sven.infrastructure.repository.status;
 
 import ch.sven.infrastructure.entity.StatusEntity;
+import ch.sven.infrastructure.entity.UserEntity;
 import ch.sven.infrastructure.repository.jpa.StatusRepositoryEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,10 @@ public class StatusRepositoryImpl implements StatusRepository {
     @Override
     public List<StatusEntity> findAll() {
         return StreamSupport.stream(statusRepository.findAll().spliterator(), false).collect(Collectors.toList());
+    }
+
+    @Override
+    public StatusEntity createStatus(StatusEntity statusEntity) {
+        return statusRepository.save(statusEntity);
     }
 }
