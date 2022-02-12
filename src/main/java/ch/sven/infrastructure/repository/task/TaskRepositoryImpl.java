@@ -19,4 +19,9 @@ public class TaskRepositoryImpl implements TaskRepository {
     public List<TaskEntity> findAll() {
         return StreamSupport.stream(taskRepository.findAll().spliterator(), false).collect(Collectors.toList());
     }
+
+    @Override
+    public TaskEntity createTask(TaskEntity taskEntity) {
+        return taskRepository.save(taskEntity);
+    }
 }

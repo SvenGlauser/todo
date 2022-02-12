@@ -7,4 +7,6 @@ import java.util.List;
 public interface TaskServiceApplication {
 
     List<TaskDto> findAll();
+
+    TaskDto createTask(TaskDto taskDto);
 }
