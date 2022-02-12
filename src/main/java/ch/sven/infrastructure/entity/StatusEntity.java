@@ -3,6 +3,7 @@ package ch.sven.infrastructure.entity;
 import ch.sven.domain.status.model.Status;
 import ch.sven.infrastructure.common.Dao;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -15,6 +16,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "TB_STATUS", schema = "TODO")
+@NoArgsConstructor
 public class StatusEntity extends Dao<Status> {
 
     @Column(name = "STATUSNAME")
@@ -25,10 +27,6 @@ public class StatusEntity extends Dao<Status> {
 
     @OneToMany(mappedBy = "status")
     private Set<TaskEntity> taskEntitySet;
-
-    public StatusEntity() {
-        // Reste vide
-    }
 
     public StatusEntity(Status status) {
         super(status);

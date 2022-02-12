@@ -1,7 +1,6 @@
 package ch.sven.infrastructure.repository.task;
 
 import ch.sven.infrastructure.entity.TaskEntity;
-import ch.sven.infrastructure.entity.UserEntity;
 
 import java.util.List;
 

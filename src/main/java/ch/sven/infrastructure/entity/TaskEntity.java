@@ -3,6 +3,7 @@ package ch.sven.infrastructure.entity;
 import ch.sven.domain.task.model.Task;
 import ch.sven.infrastructure.common.Dao;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.util.Optional;
 @Setter
 @Entity
 @Table(name = "TB_TASK", schema = "TODO")
+@NoArgsConstructor
 public class TaskEntity extends Dao<Task> {
 
     @Column(name = "TASKNAME")
@@ -27,13 +29,6 @@ public class TaskEntity extends Dao<Task> {
     @ManyToOne(targetEntity = StatusEntity.class)
     @JoinColumn(name = "FK_STATUS")
     private StatusEntity status;
-
-    /**
-     * Constructeur non paramétré
-     */
-    public TaskEntity() {
-        // Reste vide
-    }
 
     /**
      * Constructeur paramétré

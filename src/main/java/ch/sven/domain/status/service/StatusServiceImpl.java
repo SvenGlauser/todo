@@ -1,7 +1,6 @@
 package ch.sven.domain.status.service;
 
 import ch.sven.domain.status.model.Status;
-import ch.sven.infrastructure.common.Dao;
 import ch.sven.infrastructure.entity.StatusEntity;
 import ch.sven.infrastructure.repository.status.StatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;

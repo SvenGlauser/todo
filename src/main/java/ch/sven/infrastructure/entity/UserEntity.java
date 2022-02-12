@@ -3,6 +3,7 @@ package ch.sven.infrastructure.entity;
 import ch.sven.domain.user.model.User;
 import ch.sven.infrastructure.common.Dao;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -15,6 +16,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "TB_USER", schema = "TODO")
+@NoArgsConstructor
 public class UserEntity extends Dao<User> {
 
     @Column(name = "USERNAME")
@@ -25,13 +27,6 @@ public class UserEntity extends Dao<User> {
 
     @OneToMany(mappedBy = "user")
     private Set<TaskEntity> taskEntitySet;
-
-    /**
-     * Constructeur non paramétré
-     */
-    public UserEntity() {
-        // Reste vide
-    }
 
     /**
      * Constructeur paramétré

@@ -3,17 +3,15 @@ package ch.sven.application.status.dto;
 import ch.sven.application.common.Dto;
 import ch.sven.domain.status.model.Status;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class StatusDto extends Dto<Status> {
     private String statusName;
     private String statusDescription;
-
-    public StatusDto() {
-        // Reste vide
-    }
 
     public StatusDto(Status status) {
         super(status);
