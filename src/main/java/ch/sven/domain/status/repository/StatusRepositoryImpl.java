@@ -1,7 +1,8 @@
-package ch.sven.infrastructure.repository.status;
+package ch.sven.domain.status.repository;
 
 import ch.sven.infrastructure.entity.StatusEntity;
 import ch.sven.infrastructure.repository.jpa.StatusRepositoryEntity;
+import ch.sven.infrastructure.repository.status.StatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

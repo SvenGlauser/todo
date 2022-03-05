@@ -1,7 +1,8 @@
-package ch.sven.infrastructure.repository.user;
+package ch.sven.domain.user.repository;
 
 import ch.sven.infrastructure.entity.UserEntity;
 import ch.sven.infrastructure.repository.jpa.UserRepositoryEntity;
+import ch.sven.infrastructure.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

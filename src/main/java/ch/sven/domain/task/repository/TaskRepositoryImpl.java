@@ -1,7 +1,8 @@
-package ch.sven.infrastructure.repository.task;
+package ch.sven.domain.task.repository;
 
 import ch.sven.infrastructure.entity.TaskEntity;
 import ch.sven.infrastructure.repository.jpa.TaskRepositoryEntity;
+import ch.sven.infrastructure.repository.task.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
