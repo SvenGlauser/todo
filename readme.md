@@ -11,13 +11,18 @@ Backend for a todo list application
 
 ### Build
 
-Build with Maven `mvn clean package`
+#### Build with Maven 
+
+`mvn clean package`
 
 ### Deploy to docker
 
 #### Docker create image 
+
 `docker build -t todo-backend .`
+
 #### Docker compose image with postgresql 
+
 `docker compose up`
 
 ## API Reference
