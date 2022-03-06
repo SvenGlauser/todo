@@ -2,17 +2,15 @@ package ch.sven.application.common;
 
 import ch.sven.domain.common.Model;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public abstract class Dto<E extends Model> {
 
     private Long id;
-
-    public Dto() {
-        // Reste vide
-    }
 
     public Dto(E e) {
         this.id = e.getId();

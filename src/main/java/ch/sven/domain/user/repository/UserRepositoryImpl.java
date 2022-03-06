@@ -4,7 +4,6 @@ import ch.sven.infrastructure.entity.UserEntity;
 import ch.sven.infrastructure.repository.jpa.UserRepositoryEntity;
 import ch.sven.infrastructure.repository.user.UserRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

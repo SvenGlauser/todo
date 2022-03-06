@@ -3,7 +3,6 @@ package ch.sven.application.status.service;
 import ch.sven.application.status.dto.StatusDto;
 import ch.sven.domain.status.service.StatusService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

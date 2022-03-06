@@ -2,9 +2,7 @@ package ch.sven.application.task.service;
 
 import ch.sven.application.task.dto.TaskDto;
 import ch.sven.domain.task.service.TaskService;
-import ch.sven.domain.task.service.TaskServiceImpl;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

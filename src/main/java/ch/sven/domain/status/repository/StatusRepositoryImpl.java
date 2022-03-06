@@ -4,7 +4,6 @@ import ch.sven.infrastructure.entity.StatusEntity;
 import ch.sven.infrastructure.repository.jpa.StatusRepositoryEntity;
 import ch.sven.infrastructure.repository.status.StatusRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

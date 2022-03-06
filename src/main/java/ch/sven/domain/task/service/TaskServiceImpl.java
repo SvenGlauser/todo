@@ -4,7 +4,6 @@ import ch.sven.domain.task.model.Task;
 import ch.sven.infrastructure.entity.TaskEntity;
 import ch.sven.infrastructure.repository.task.TaskRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

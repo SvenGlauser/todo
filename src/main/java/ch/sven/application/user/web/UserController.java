@@ -4,9 +4,7 @@ import ch.sven.application.configuration.ApiConfig;
 import ch.sven.application.user.dto.UserDto;
 import ch.sven.application.user.dto.UserDtoLight;
 import ch.sven.application.user.service.UserServiceApplication;
-import ch.sven.application.user.service.UserServiceApplicationImpl;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
