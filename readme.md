@@ -38,7 +38,7 @@ Return the created user
 ### Put user
 
 ```http
-POST /todo/v1/users
+PUT /todo/v1/users
 ```
 
 | Parameter     | Type   | Description                  |
