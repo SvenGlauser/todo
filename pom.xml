@@ -56,8 +56,18 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-verison}</version>
+                <configuration>
+                    <mainClass>ch.sven.Application</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
+        <finalName>todo-backend</finalName>
     </build>
-
 </project>

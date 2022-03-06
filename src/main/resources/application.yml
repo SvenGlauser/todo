@@ -8,12 +8,6 @@ spring:
   profiles:
     default: prod
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: Admlocal1
-    driver-class-name: org.postgresql.Driver
-
   jpa:
     hibernate:
       ddl-auto: none

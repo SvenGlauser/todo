@@ -3,11 +3,22 @@
 
 Backend for a todo list application
 
-
 ## Authors
 
 - [@SvenGlauser](https://www.github.com/svenglauser)
 
+## Deploy application
+
+### Build
+
+Build with Maven `mvn clean package`
+
+### Deploy to docker
+
+#### Docker create image 
+`docker build -t todo-backend .`
+#### Docker compose image with postgresql 
+`docker compose up`
 
 ## API Reference
 
@@ -128,7 +139,6 @@ Return the modified task
 ## Tech Stack
 
 **Server:** Spring Boot, Spring Boot Security, Lombok, Liquibase
-
 
 ## Source
 
