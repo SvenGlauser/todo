@@ -3,6 +3,7 @@ package ch.sven.domain.task.service;
 import ch.sven.domain.task.model.Task;
 import ch.sven.infrastructure.entity.TaskEntity;
 import ch.sven.infrastructure.repository.task.TaskRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +12,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor
 public class TaskServiceImpl implements TaskService {
 
-    @Autowired
-    private TaskRepository taskRepository;
+    private final TaskRepository taskRepository;
 
     @Override
     public List<Task> findAll() {

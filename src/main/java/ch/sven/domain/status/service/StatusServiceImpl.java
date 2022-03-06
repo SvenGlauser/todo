@@ -3,6 +3,7 @@ package ch.sven.domain.status.service;
 import ch.sven.domain.status.model.Status;
 import ch.sven.infrastructure.entity.StatusEntity;
 import ch.sven.infrastructure.repository.status.StatusRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +12,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor
 public class StatusServiceImpl implements StatusService {
 
-    @Autowired
-    private StatusRepository statusRepository;
+    private final StatusRepository statusRepository;
 
     @Override
     public List<Status> findAll() {

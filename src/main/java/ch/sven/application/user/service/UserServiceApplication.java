@@ -1,6 +1,7 @@
 package ch.sven.application.user.service;
 
 import ch.sven.application.user.dto.UserDto;
+import ch.sven.application.user.dto.UserDtoLight;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface UserServiceApplication {
      * Find all users
      * @return List of users
      */
-    List<UserDto> findAll();
+    List<UserDtoLight> findAll();
 
     /**
      * Create a new user

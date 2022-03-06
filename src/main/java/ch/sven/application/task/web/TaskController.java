@@ -2,7 +2,9 @@ package ch.sven.application.task.web;
 
 import ch.sven.application.configuration.ApiConfig;
 import ch.sven.application.task.dto.TaskDto;
+import ch.sven.application.task.service.TaskServiceApplication;
 import ch.sven.application.task.service.TaskServiceApplicationImpl;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,10 +12,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = ApiConfig.API_URL + "/tasks")
+@AllArgsConstructor
 public class TaskController {
 
-    @Autowired
-    private TaskServiceApplicationImpl taskServiceApplication;
+    private final TaskServiceApplication taskServiceApplication;
 
     @GetMapping
     public List<TaskDto> listTask() {

@@ -3,6 +3,7 @@ package ch.sven.domain.user.repository;
 import ch.sven.infrastructure.entity.UserEntity;
 import ch.sven.infrastructure.repository.jpa.UserRepositoryEntity;
 import ch.sven.infrastructure.repository.user.UserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +12,10 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
+@AllArgsConstructor
 public class UserRepositoryImpl implements UserRepository {
 
-    @Autowired
-    private UserRepositoryEntity userRepository;
+    private final UserRepositoryEntity userRepository;
 
     @Override
     public List<UserEntity> findAll() {

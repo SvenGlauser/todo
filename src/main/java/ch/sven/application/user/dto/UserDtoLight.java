@@ -9,21 +9,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserDto extends Dto<User> {
+public class UserDtoLight extends Dto<User> {
     private String username;
-    private String password;
 
-    public UserDto(User user) {
+    public UserDtoLight(User user) {
         super(user);
         this.username = user.getUsername();
-        this.password = user.getPassword();
     }
 
     @Override
     public User toDomaineEntity() {
         User user = new User();
         user.setUsername(this.username);
-        user.setPassword(this.password);
         return user;
     }
 }
