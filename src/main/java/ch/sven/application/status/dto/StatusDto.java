@@ -13,6 +13,10 @@ public class StatusDto extends Dto<Status> {
     private String statusName;
     private String statusDescription;
 
+    /**
+     * Constructeur paramétré
+     * @param status Status
+     */
     public StatusDto(Status status) {
         super(status);
         this.statusName = status.getStatusName();

@@ -19,6 +19,10 @@ public class TaskDto extends Dto<Task> {
     private UserDto user;
     private StatusDto status;
 
+    /**
+     * Constructeur paramétré
+     * @param task Tâche
+     */
     public TaskDto(Task task) {
         super(task);
         this.taskName = task.getTaskName();

@@ -16,8 +16,12 @@ import java.util.List;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        // Load CORS configuration with @Bean of corsConfigurationSource()
         http.cors();
+
         http.csrf().disable();
+
+        // Enable Basic Auth
         http
             .authorizeRequests()
             .anyRequest().authenticated()

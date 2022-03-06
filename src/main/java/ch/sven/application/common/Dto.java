@@ -16,6 +16,11 @@ public abstract class Dto<E extends Model> {
         this.id = e.getId();
     }
 
+
+    /**
+     * Transformer un objet DTO en objet domaine
+     * @return L'objet domaine
+     */
     public E toDomaine() {
         E e = this.toDomaineEntity();
 
@@ -24,5 +29,10 @@ public abstract class Dto<E extends Model> {
         return e;
     }
 
+    /**
+     * Methode à ne pas utiliser
+     * Transformer un objet DTO en objet domaine
+     * @return L'objet domaine
+     */
     public abstract E toDomaineEntity();
 }

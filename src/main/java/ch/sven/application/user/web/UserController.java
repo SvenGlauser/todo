@@ -16,11 +16,20 @@ public class UserController {
 
     private final UserServiceApplication userServiceApplication;
 
+    /**
+     * Récupérer la liste des users
+     * @return Une liste de UserDto
+     */
     @GetMapping
     public List<UserDtoLight> listUser() {
         return userServiceApplication.findAll();
     }
 
+    /**
+     * Créer un utilisateur
+     * @param userDto L'utilisateur à créer
+     * @return L'utilisateur créé
+     */
     @PostMapping
     public UserDto createUser(@RequestBody UserDto userDto) {
         return userServiceApplication.createUser(userDto);

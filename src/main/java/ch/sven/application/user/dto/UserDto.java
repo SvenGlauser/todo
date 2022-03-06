@@ -13,6 +13,10 @@ public class UserDto extends Dto<User> {
     private String username;
     private String password;
 
+    /**
+     * Constructeur paramétré
+     * @param user User
+     */
     public UserDto(User user) {
         super(user);
         this.username = user.getUsername();

@@ -12,6 +12,10 @@ import lombok.Setter;
 public class UserDtoLight extends Dto<User> {
     private String username;
 
+    /**
+     * Constructeur paramétré
+     * @param user User (l'id sera supprimé car il s'agit d'un UserDtoLight)
+     */
     public UserDtoLight(User user) {
         super(user);
         this.username = user.getUsername();
