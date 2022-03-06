@@ -21,8 +21,8 @@ public class UserController {
      * @return Une liste de UserDto
      */
     @GetMapping
-    public List<UserDtoLight> listUser() {
-        return userServiceApplication.findAll();
+    public List<UserDtoLight> recupererUsers() {
+        return userServiceApplication.recupererUsers();
     }
 
     /**
@@ -31,7 +31,17 @@ public class UserController {
      * @return L'utilisateur créé
      */
     @PostMapping
-    public UserDto createUser(@RequestBody UserDto userDto) {
-        return userServiceApplication.createUser(userDto);
+    public UserDto creerUser(@RequestBody UserDto userDto) {
+        return userServiceApplication.sauvegarderUser(userDto);
+    }
+
+    /**
+     * Créer un utilisateur
+     * @param userDto L'utilisateur à créer
+     * @return L'utilisateur créé
+     */
+    @PutMapping
+    public UserDto modifierUser(@RequestBody UserDto userDto) {
+        return userServiceApplication.sauvegarderUser(userDto);
     }
 }

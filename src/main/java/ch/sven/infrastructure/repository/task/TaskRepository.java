@@ -6,7 +6,16 @@ import java.util.List;
 
 public interface TaskRepository {
 
-    List<TaskEntity> findAll();
+    /**
+     * Récupérer toutes les tâches
+     * @return Une liste de toutes les tâches
+     */
+    List<TaskEntity> recupererTasks();
 
-    TaskEntity createTask(TaskEntity taskEntity);
+    /**
+     * Sauvegarder une tâche
+     * @param taskEntity La tâche à sauvegarder
+     * @return La tâche qui a été sauvegardée
+     */
+    TaskEntity sauvegarderTask(TaskEntity taskEntity);
 }

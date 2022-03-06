@@ -20,8 +20,8 @@ public class TaskController {
      * @return Une liste de tâche
      */
     @GetMapping
-    public List<TaskDto> listTask() {
-        return taskServiceApplication.findAll();
+    public List<TaskDto> recupererTasks() {
+        return taskServiceApplication.recupererTasks();
     }
 
     /**
@@ -30,7 +30,17 @@ public class TaskController {
      * @return La tâche créé
      */
     @PostMapping
-    public TaskDto createTask(@RequestBody TaskDto taskDto) {
-        return taskServiceApplication.createTask(taskDto);
+    public TaskDto creerTask(@RequestBody TaskDto taskDto) {
+        return taskServiceApplication.sauvegarderTask(taskDto);
+    }
+
+    /**
+     * Modifier une tâche
+     * @param taskDto Tâche à modifier
+     * @return La tâche modifier
+     */
+    @PutMapping
+    public TaskDto modifierTask(@RequestBody TaskDto taskDto) {
+        return taskServiceApplication.sauvegarderTask(taskDto);
     }
 }

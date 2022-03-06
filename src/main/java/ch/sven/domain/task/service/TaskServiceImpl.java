@@ -17,12 +17,12 @@ public class TaskServiceImpl implements TaskService {
     private final TaskRepository taskRepository;
 
     @Override
-    public List<Task> findAll() {
-        return taskRepository.findAll().stream().map(TaskEntity::toDomaine).collect(Collectors.toList());
+    public List<Task> recupererTasks() {
+        return taskRepository.recupererTasks().stream().map(TaskEntity::toDomaine).collect(Collectors.toList());
     }
 
     @Override
-    public Task createTask(Task task) {
-        return Optional.ofNullable(taskRepository.createTask(Optional.ofNullable(task).map(TaskEntity::new).orElse(null))).map(TaskEntity::toDomaine).orElse(null);
+    public Task sauvegarderTask(Task task) {
+        return Optional.ofNullable(taskRepository.sauvegarderTask(Optional.ofNullable(task).map(TaskEntity::new).orElse(null))).map(TaskEntity::toDomaine).orElse(null);
     }
 }

@@ -6,7 +6,16 @@ import java.util.List;
 
 public interface StatusService {
 
-    List<Status> findAll();
+    /**
+     * Récupérer tous les status
+     * @return Une liste de tous les status
+     */
+    List<Status> recupererStatus();
 
-    Status createStatus(Status status);
+    /**
+     * Sauvegarder un status
+     * @param status Le status à sauvegarder
+     * @return Le status qui a été sauvegardé
+     */
+    Status sauvegarderStatus(Status status);
 }

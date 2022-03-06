@@ -17,12 +17,12 @@ public class UserServiceApplicationImpl implements UserServiceApplication {
     private final UserService userService;
 
     @Override
-    public List<UserDtoLight> findAll() {
-        return userService.findAll().stream().map(UserDtoLight::new).collect(Collectors.toList());
+    public List<UserDtoLight> recupererUsers() {
+        return userService.recupererUsers().stream().map(UserDtoLight::new).collect(Collectors.toList());
     }
 
     @Override
-    public UserDto createUser(UserDto userDto) {
-        return Optional.ofNullable(userService.createUser(userDto.toDomaine())).map(UserDto::new).orElse(null);
+    public UserDto sauvegarderUser(UserDto userDto) {
+        return Optional.ofNullable(userService.sauvegarderUser(userDto.toDomaine())).map(UserDto::new).orElse(null);
     }
 }

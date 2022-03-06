@@ -10,12 +10,12 @@ public interface TaskServiceApplication {
      * Récupérer toutes les tâches
      * @return Une liste de toutes les tâches
      */
-    List<TaskDto> findAll();
+    List<TaskDto> recupererTasks();
 
     /**
-     * Créer une tâche
-     * @param taskDto La tâche à créer
-     * @return La tâche créée
+     * Sauvegarder une tâche
+     * @param taskDto La tâche à sauvegarder
+     * @return La tâche qui a été sauvegardée
      */
-    TaskDto createTask(TaskDto taskDto);
+    TaskDto sauvegarderTask(TaskDto taskDto);
 }

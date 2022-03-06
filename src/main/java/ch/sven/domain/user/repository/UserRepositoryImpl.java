@@ -17,12 +17,12 @@ public class UserRepositoryImpl implements UserRepository {
     private final UserRepositoryEntity userRepository;
 
     @Override
-    public List<UserEntity> findAll() {
+    public List<UserEntity> recupererUsers() {
         return StreamSupport.stream(userRepository.findAll().spliterator(), false).collect(Collectors.toList());
     }
 
     @Override
-    public UserEntity createUser(UserEntity userEntity) {
+    public UserEntity sauvegarderUser(UserEntity userEntity) {
         return userRepository.save(userEntity);
     }
 }

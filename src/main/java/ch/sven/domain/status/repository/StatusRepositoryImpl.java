@@ -17,12 +17,12 @@ public class StatusRepositoryImpl implements StatusRepository {
     private final StatusRepositoryEntity statusRepository;
 
     @Override
-    public List<StatusEntity> findAll() {
+    public List<StatusEntity> recupererStatus() {
         return StreamSupport.stream(statusRepository.findAll().spliterator(), false).collect(Collectors.toList());
     }
 
     @Override
-    public StatusEntity createStatus(StatusEntity statusEntity) {
+    public StatusEntity sauvegarderStatus(StatusEntity statusEntity) {
         return statusRepository.save(statusEntity);
     }
 }

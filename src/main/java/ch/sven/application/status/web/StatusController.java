@@ -21,16 +21,26 @@ public class StatusController {
      */
     @GetMapping
     public List<StatusDto> listStatus() {
-        return statusServiceApplication.findAll();
+        return statusServiceApplication.recupererStatus();
     }
 
     /**
-     * Créer un status dans la DB
+     * Créer un status
      * @param statusDto Le status à créer
-     * @return Le status créé
+     * @return Le status qui a été créé
      */
     @PostMapping
-    public StatusDto createStatus(@RequestBody StatusDto statusDto) {
-        return statusServiceApplication.createStatus(statusDto);
+    public StatusDto creerStatus(@RequestBody StatusDto statusDto) {
+        return statusServiceApplication.sauvegarderStatus(statusDto);
+    }
+
+    /**
+     * Modifier un status
+     * @param statusDto Le status à modifier
+     * @return Le status qui a été modifié
+     */
+    @PutMapping
+    public StatusDto modifierStatus(@RequestBody StatusDto statusDto) {
+        return statusServiceApplication.sauvegarderStatus(statusDto);
     }
 }

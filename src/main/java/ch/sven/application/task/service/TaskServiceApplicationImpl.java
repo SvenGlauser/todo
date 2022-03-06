@@ -16,12 +16,12 @@ public class TaskServiceApplicationImpl implements TaskServiceApplication {
     private final TaskService taskService;
 
     @Override
-    public List<TaskDto> findAll() {
-        return taskService.findAll().stream().map(TaskDto::new).collect(Collectors.toList());
+    public List<TaskDto> recupererTasks() {
+        return taskService.recupererTasks().stream().map(TaskDto::new).collect(Collectors.toList());
     }
 
     @Override
-    public TaskDto createTask(TaskDto taskDto) {
-        return Optional.ofNullable(taskService.createTask(Optional.ofNullable(taskDto).map(TaskDto::toDomaine).orElse(null))).map(TaskDto::new).orElse(null);
+    public TaskDto sauvegarderTask(TaskDto taskDto) {
+        return Optional.ofNullable(taskService.sauvegarderTask(Optional.ofNullable(taskDto).map(TaskDto::toDomaine).orElse(null))).map(TaskDto::new).orElse(null);
     }
 }

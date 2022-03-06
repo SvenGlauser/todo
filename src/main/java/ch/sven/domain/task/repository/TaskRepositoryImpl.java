@@ -17,12 +17,12 @@ public class TaskRepositoryImpl implements TaskRepository {
     private final TaskRepositoryEntity taskRepository;
 
     @Override
-    public List<TaskEntity> findAll() {
+    public List<TaskEntity> recupererTasks() {
         return StreamSupport.stream(taskRepository.findAll().spliterator(), false).collect(Collectors.toList());
     }
 
     @Override
-    public TaskEntity createTask(TaskEntity taskEntity) {
+    public TaskEntity sauvegarderTask(TaskEntity taskEntity) {
         return taskRepository.save(taskEntity);
     }
 }

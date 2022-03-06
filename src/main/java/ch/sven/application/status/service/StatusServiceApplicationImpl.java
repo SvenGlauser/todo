@@ -16,12 +16,12 @@ public class StatusServiceApplicationImpl implements StatusServiceApplication {
     private final StatusService statusService;
 
     @Override
-    public List<StatusDto> findAll() {
-        return statusService.findAll().stream().map(StatusDto::new).collect(Collectors.toList());
+    public List<StatusDto> recupererStatus() {
+        return statusService.recupererStatus().stream().map(StatusDto::new).collect(Collectors.toList());
     }
 
     @Override
-    public StatusDto createStatus(StatusDto statusDto) {
-        return Optional.ofNullable(statusService.createStatus(Optional.ofNullable(statusDto).map(StatusDto::toDomaine).orElse(null))).map(StatusDto::new).orElse(null);
+    public StatusDto sauvegarderStatus(StatusDto statusDto) {
+        return Optional.ofNullable(statusService.sauvegarderStatus(Optional.ofNullable(statusDto).map(StatusDto::toDomaine).orElse(null))).map(StatusDto::new).orElse(null);
     }
 }

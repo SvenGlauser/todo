@@ -17,12 +17,12 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public List<User> findAll() {
-        return userRepository.findAll().stream().map(UserEntity::toDomaine).collect(Collectors.toList());
+    public List<User> recupererUsers() {
+        return userRepository.recupererUsers().stream().map(UserEntity::toDomaine).collect(Collectors.toList());
     }
 
     @Override
-    public User createUser(User user) {
-        return Optional.ofNullable(userRepository.createUser(Optional.of(user).map(UserEntity::new).orElse(null))).map(UserEntity::toDomaine).orElse(null);
+    public User sauvegarderUser(User user) {
+        return Optional.ofNullable(userRepository.sauvegarderUser(Optional.of(user).map(UserEntity::new).orElse(null))).map(UserEntity::toDomaine).orElse(null);
     }
 }

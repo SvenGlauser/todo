@@ -10,12 +10,12 @@ public interface StatusServiceApplication {
      * Récupérer tous les status
      * @return Une liste de tous les status
      */
-    List<StatusDto> findAll();
+    List<StatusDto> recupererStatus();
 
     /**
-     * Créer un status
-     * @param statusDto Status à créer
-     * @return Le status créé
+     * Sauvegarder un status
+     * @param statusDto Le status à sauvegarder
+     * @return Le status qui a été sauvegardé
      */
-    StatusDto createStatus(StatusDto statusDto);
+    StatusDto sauvegarderStatus(StatusDto statusDto);
 }

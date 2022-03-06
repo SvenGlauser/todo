@@ -7,15 +7,15 @@ import java.util.List;
 public interface UserService {
 
     /**
-     * Find all users
-     * @return List of users
+     * Récupérer la liste des utilisateurs
+     * @return Liste des utilisateurs
      */
-    List<User> findAll();
+    List<User> recupererUsers();
 
     /**
-     * Create a new user
-     * @param user The new user to create
-     * @return The created user
+     * Sauvegarder un utilisateur
+     * @param user Utilisateur à sauvegarder
+     * @return Utilisateur qui à été sauvegarder
      */
-    User createUser(User user);
+    User sauvegarderUser(User user);
 }

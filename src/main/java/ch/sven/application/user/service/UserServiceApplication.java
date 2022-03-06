@@ -8,15 +8,15 @@ import java.util.List;
 public interface UserServiceApplication {
 
     /**
-     * Find all users
-     * @return List of users
+     * Récupérer la liste des utilisateurs
+     * @return Liste des utilisateurs
      */
-    List<UserDtoLight> findAll();
+    List<UserDtoLight> recupererUsers();
 
     /**
-     * Create a new user
-     * @param userDto The new user to create
-     * @return The created user
+     * Sauvegarder un utilisateur
+     * @param userDto Utilisateur à sauvegarder
+     * @return Utilisateur qui à été sauvegarder
      */
-    UserDto createUser(UserDto userDto);
+    UserDto sauvegarderUser(UserDto userDto);
 }
