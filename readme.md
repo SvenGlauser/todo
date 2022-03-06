@@ -48,7 +48,7 @@ Return a list of all status
 ### Post status
 
 ```http
-PSOT /todo/v1/status
+POST /todo/v1/status
 ```
 
 | Parameter     | Type     | Description                    |
@@ -72,7 +72,7 @@ Return a list of all tasks
 ### Post task
 
 ```http
-PSOT /todo/v1/tasks
+POST /todo/v1/tasks
 ```
 
 | Parameter     | Type   | Description                  |
