@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
+
+        <changeSet id="create-table-status" author="Sven Glauser">
+            <createTable tableName="tb_status"
+                         schemaName="todo">
+                <column name="id"
+                        type="java.lang.Long"
+                        autoIncrement="true"/>
+
+                <column name="statusname"
+                        type="java.lang.String"/>
+
+                <column name="statusdescription"
+                        type="java.lang.String"/>
+            </createTable>
+
+            <addPrimaryKey schemaName="todo"
+                           tableName="tb_status"
+                           columnNames="id"
+                           constraintName="pk_id_tb_status"/>
+
+            <addUniqueConstraint schemaName="todo"
+                                 tableName="tb_status"
+                                 columnNames="statusname"
+                                 constraintName="ct_un_statusname_tb_status"/>
+        </changeSet>
+</databaseChangeLog>

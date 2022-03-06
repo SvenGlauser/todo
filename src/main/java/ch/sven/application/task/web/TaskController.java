@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = ApiConfig.API_URL)
+@RequestMapping(value = ApiConfig.API_URL + "/tasks")
 public class TaskController {
 
     @Autowired
     private TaskServiceApplicationImpl taskServiceApplication;
 
-    @GetMapping(path = "/tasks")
+    @GetMapping
     public List<TaskDto> listTask() {
         return taskServiceApplication.findAll();
     }
 
-    @PostMapping(path = "/tasks")
+    @PostMapping
     public TaskDto createTask(@RequestBody TaskDto taskDto) {
         return taskServiceApplication.createTask(taskDto);
     }

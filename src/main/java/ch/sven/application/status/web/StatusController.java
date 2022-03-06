@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = ApiConfig.API_URL)
+@RequestMapping(value = ApiConfig.API_URL + "/status")
 public class StatusController {
 
     @Autowired
     private StatusServiceApplicationImpl statusServiceApplication;
 
-    @GetMapping("/status")
+    @GetMapping
     public List<StatusDto> listStatus() {
         return statusServiceApplication.findAll();
     }
 
-    @PostMapping("/status")
+    @PostMapping
     public StatusDto createStatus(@RequestBody StatusDto statusDto) {
         return statusServiceApplication.createStatus(statusDto);
     }

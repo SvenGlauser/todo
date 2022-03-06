@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = ApiConfig.API_URL)
+@RequestMapping(value = ApiConfig.API_URL + "/users")
 public class UserController {
 
     @Autowired
     private UserServiceApplicationImpl userServiceApplication;
 
-    @GetMapping("/users")
+    @GetMapping
     public List<UserDto> listUser() {
         return userServiceApplication.findAll();
     }
 
-    @PostMapping("/users")
+    @PostMapping
     public UserDto createUser(@RequestBody UserDto userDto) {
         return userServiceApplication.createUser(userDto);
     }
