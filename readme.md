@@ -17,7 +17,7 @@ Backend for a todo list application
 GET /todo/v1/users
 ```
 
-#### getUsers()
+#### recupererUsers()
 
 Return a list of all users
 
@@ -31,9 +31,23 @@ POST /todo/v1/users
 |:--------------|:-------|:-----------------------------|
 | `RequestBody` | `user` | **Required**. User to create |
 
-#### createUser()
+#### creerUser()
 
 Return the created user
+
+### Put user
+
+```http
+POST /todo/v1/users
+```
+
+| Parameter     | Type   | Description                  |
+|:--------------|:-------|:-----------------------------|
+| `RequestBody` | `user` | **Required**. User to modify |
+
+#### modifierUser()
+
+Return the modified user
 
 ### Get status
 
@@ -41,7 +55,7 @@ Return the created user
 GET /todo/v1/status
 ```
 
-#### getStatus()
+#### recupererStatus()
 
 Return a list of all status
 
@@ -55,9 +69,23 @@ POST /todo/v1/status
 |:--------------|:---------|:-------------------------------|
 | `RequestBody` | `status` | **Required**. Status to create |
 
-#### createStatus()
+#### creerStatus()
 
 Return the created status
+
+### Put status
+
+```http
+PUT /todo/v1/status
+```
+
+| Parameter     | Type     | Description                    |
+|:--------------|:---------|:-------------------------------|
+| `RequestBody` | `status` | **Required**. Status to modify |
+
+#### modifierStatus()
+
+Return the modified status
 
 ### Get tasks
 
@@ -65,7 +93,7 @@ Return the created status
 GET /todo/v1/tasks
 ```
 
-#### getStatus()
+#### recupererTasks()
 
 Return a list of all tasks
 
@@ -79,10 +107,23 @@ POST /todo/v1/tasks
 |:--------------|:-------|:-----------------------------|
 | `RequestBody` | `task` | **Required**. Task to create |
 
-#### createStatus()
+#### creerTask()
 
 Return the created task
 
+### Put task
+
+```http
+PUT /todo/v1/tasks
+```
+
+| Parameter     | Type   | Description                  |
+|:--------------|:-------|:-----------------------------|
+| `RequestBody` | `task` | **Required**. Task to modify |
+
+#### modifierTask()
+
+Return the modified task
 
 ## Tech Stack
 
