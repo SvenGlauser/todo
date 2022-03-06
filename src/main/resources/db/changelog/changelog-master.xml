@@ -6,7 +6,7 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
     <!-- Changes to include -->
-    <include file="/schema.sql"/>
+    <include file="db/changelog/schema.sql"/>
     <include file="db/changelog/changes/create-table/changelog-create-user.xml"/>
     <include file="db/changelog/changes/create-table/changelog-create-status.xml"/>
     <include file="db/changelog/changes/create-table/changelog-create-task.xml"/>
