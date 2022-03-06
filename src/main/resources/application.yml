@@ -5,6 +5,9 @@ spring:
   application:
     name: Todo App Backend
 
+  profiles:
+    default: prod
+
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
