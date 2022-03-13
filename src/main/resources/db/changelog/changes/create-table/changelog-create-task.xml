@@ -9,20 +9,20 @@
         <createTable tableName="tb_task"
                      schemaName="todo">
             <column name="id"
-                    type="java.lang.Long"
+                    type="INTEGER"
                     autoIncrement="true"/>
 
             <column name="taskname"
-                    type="java.lang.String"/>
+                    type="VARCHAR2(255)"/>
 
             <column name="taskdescription"
-                    type="java.lang.String"/>
+                    type="VARCHAR2(255)"/>
 
             <column name="fk_user"
-                    type="java.lang.Long"/>
+                    type="INTEGER"/>
 
             <column name="fk_status"
-                    type="java.lang.Long"/>
+                    type="INTEGER"/>
         </createTable>
 
         <addPrimaryKey schemaName="todo"

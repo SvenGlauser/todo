@@ -9,14 +9,14 @@
             <createTable tableName="tb_status"
                          schemaName="todo">
                 <column name="id"
-                        type="java.lang.Long"
+                        type="INTEGER"
                         autoIncrement="true"/>
 
                 <column name="statusname"
-                        type="java.lang.String"/>
+                        type="VARCHAR2(255)"/>
 
                 <column name="statusdescription"
-                        type="java.lang.String"/>
+                        type="VARCHAR2(255)"/>
             </createTable>
 
             <addPrimaryKey schemaName="todo"

@@ -18,7 +18,7 @@ public abstract class Dao<E extends Model> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     public Dao(E e) {
         this.id = e.getId();
