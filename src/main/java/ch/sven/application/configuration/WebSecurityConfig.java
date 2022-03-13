@@ -56,17 +56,26 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication()
                 .dataSource(datasource)
-                .usersByUsernameQuery("SELECT username, password, enabled\n" +
-                                      "FROM todo.utilisateur\n" +
-                                      "WHERE username = ?")
-                .authoritiesByUsernameQuery("SELECT u.username as username, authority as role\n" +
-                                            "FROM todo.authority\n" +
-                                            "INNER JOIN todo.utilisateur u on u.id = authority.utilisateur\n" +
-                                            "WHERE u.username = ?");
+                .usersByUsernameQuery(getUserRequest())
+                .authoritiesByUsernameQuery(getRoleRequest());
     }
 
     @Bean
     public PasswordEncoder getPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
+    }
+
+    private static String getRoleRequest() {
+        return "SELECT u.username, role.role\n" +
+                "FROM todo.role\n" +
+                "INNER JOIN todo.role_utilisateur ru on role.id = ru.role\n" +
+                "INNER JOIN todo.utilisateur u on u.id = ru.utilisateur\n" +
+                "WHERE u.username = ?";
+    }
+
+    private static String getUserRequest() {
+        return "SELECT username, password, enabled\n" +
+                "FROM todo.utilisateur\n" +
+                "WHERE username = ?";
     }
 }

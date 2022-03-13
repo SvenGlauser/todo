@@ -9,6 +9,7 @@
     <include file="db/changelog/changes/load-data/changelog-load-data-progression.xml"/>
     <include file="db/changelog/changes/load-data/changelog-load-data-utilisateur.xml"/>
     <include file="db/changelog/changes/load-data/changelog-load-data-tache.xml"/>
-    <include file="db/changelog/changes/load-data/changelog-load-data-authority.xml"/>
+    <include file="db/changelog/changes/load-data/changelog-load-data-role.xml"/>
+    <include file="db/changelog/changes/load-data/changelog-load-data-role-utilisateur.xml"/>
 
 </databaseChangeLog>

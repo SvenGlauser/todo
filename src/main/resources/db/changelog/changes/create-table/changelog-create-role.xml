@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
+
+    <changeSet id="create-table-role" author="Sven Glauser">
+        <createTable tableName="ROLE"
+                     schemaName="TODO">
+
+            <column name="ID"
+                    type="INTEGER"
+                    autoIncrement="true"/>
+
+            <column name="ROLE"
+                    type="VARCHAR2(255)"/>
+
+        </createTable>
+
+        <addPrimaryKey schemaName="TODO"
+                       tableName="ROLE"
+                       columnNames="ID"
+                       constraintName="PK_ID_ROLE"/>
+    </changeSet>
+</databaseChangeLog>

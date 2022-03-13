@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
+
+    <changeSet id="create-table-role-utilisateur" author="Sven Glauser">
+        <createTable tableName="ROLE_UTILISATEUR"
+                     schemaName="TODO">
+
+            <column name="ROLE"
+                    type="INTEGER"/>
+
+            <column name="UTILISATEUR"
+                    type="INTEGER"/>
+        </createTable>
+
+        <addPrimaryKey schemaName="TODO"
+                       tableName="ROLE_UTILISATEUR"
+                       columnNames="ROLE, UTILISATEUR"
+                       constraintName="PK_ROLE_UTILISATEUR"/>
+
+        <addForeignKeyConstraint baseTableSchemaName="todo"
+                                 baseTableName="ROLE_UTILISATEUR"
+                                 baseColumnNames="UTILISATEUR"
+                                 constraintName="FK_UTILISATEUR_ROLE_UTILISATEUR"
+                                 referencedTableSchemaName="todo"
+                                 referencedTableName="UTILISATEUR"
+                                 referencedColumnNames="ID"/>
+
+        <addForeignKeyConstraint baseTableSchemaName="todo"
+                                 baseTableName="ROLE_UTILISATEUR"
+                                 baseColumnNames="ROLE"
+                                 constraintName="FK_ROLE_ROLE_UTILISATEUR"
+                                 referencedTableSchemaName="todo"
+                                 referencedTableName="ROLE"
+                                 referencedColumnNames="ID"/>
+    </changeSet>
+</databaseChangeLog>
