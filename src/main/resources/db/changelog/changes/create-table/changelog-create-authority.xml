@@ -20,5 +20,13 @@
                        tableName="AUTHORITY"
                        columnNames="AUTHORITY, UTILISATEUR"
                        constraintName="PK_AUTHORITY_UTILISATEUR_AUTHORITY"/>
+
+        <addForeignKeyConstraint baseTableSchemaName="todo"
+                                 baseTableName="AUTHORITY"
+                                 baseColumnNames="UTILISATEUR"
+                                 constraintName="FK_AUTHORITY_UTILISATEUR"
+                                 referencedTableSchemaName="todo"
+                                 referencedTableName="UTILISATEUR"
+                                 referencedColumnNames="ID"/>
     </changeSet>
 </databaseChangeLog>
