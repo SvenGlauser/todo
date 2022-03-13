@@ -1,4 +1,4 @@
-package ch.sven.infrastructure.repository.status;
+package ch.sven.domain.status.repository;
 
 import ch.sven.infrastructure.entity.StatusEntity;
 

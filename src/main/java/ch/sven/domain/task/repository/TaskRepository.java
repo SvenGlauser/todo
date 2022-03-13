@@ -1,4 +1,4 @@
-package ch.sven.infrastructure.repository.task;
+package ch.sven.domain.task.repository;
 
 import ch.sven.infrastructure.entity.TaskEntity;
 

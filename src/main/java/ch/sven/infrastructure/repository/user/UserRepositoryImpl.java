@@ -1,8 +1,8 @@
-package ch.sven.domain.user.repository;
+package ch.sven.infrastructure.repository.user;
 
+import ch.sven.domain.user.repository.UserRepository;
 import ch.sven.infrastructure.entity.UserEntity;
 import ch.sven.infrastructure.repository.jpa.UserRepositoryEntity;
-import ch.sven.infrastructure.repository.user.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

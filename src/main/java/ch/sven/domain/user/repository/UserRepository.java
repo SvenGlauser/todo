@@ -1,4 +1,4 @@
-package ch.sven.infrastructure.repository.user;
+package ch.sven.domain.user.repository;
 
 import ch.sven.infrastructure.entity.UserEntity;
 

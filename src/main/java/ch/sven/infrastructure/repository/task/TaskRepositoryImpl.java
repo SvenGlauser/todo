@@ -1,8 +1,8 @@
-package ch.sven.domain.task.repository;
+package ch.sven.infrastructure.repository.task;
 
+import ch.sven.domain.task.repository.TaskRepository;
 import ch.sven.infrastructure.entity.TaskEntity;
 import ch.sven.infrastructure.repository.jpa.TaskRepositoryEntity;
-import ch.sven.infrastructure.repository.task.TaskRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

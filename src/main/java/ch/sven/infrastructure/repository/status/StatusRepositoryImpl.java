@@ -1,8 +1,8 @@
-package ch.sven.domain.status.repository;
+package ch.sven.infrastructure.repository.status;
 
+import ch.sven.domain.status.repository.StatusRepository;
 import ch.sven.infrastructure.entity.StatusEntity;
 import ch.sven.infrastructure.repository.jpa.StatusRepositoryEntity;
-import ch.sven.infrastructure.repository.status.StatusRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
