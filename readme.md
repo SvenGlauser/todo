@@ -5,7 +5,7 @@ Backend for a todo list application
 
 ## Authors
 
-- [@SvenGlauser](https://www.github.com/svenglauser)
+- [@SvenGlauser](https://www.github.com/svenGlauser)
 
 ## Deploy application
 
@@ -27,119 +27,119 @@ Backend for a todo list application
 
 ## API Reference
 
-### Get users
+### Get utilisateurs
 
 ```http
-GET /todo/v1/users
+GET /todo/v1/utilisateurs
 ```
 
-#### recupererUsers()
+#### recupererUtilisateurs()
 
-Return a list of all users
+Return a list of all utilisateurs
 
-### Post user
-
-```http
-POST /todo/v1/users
-```
-
-| Parameter     | Type   | Description                  |
-|:--------------|:-------|:-----------------------------|
-| `RequestBody` | `user` | **Required**. User to create |
-
-#### creerUser()
-
-Return the created user
-
-### Put user
+### Post utilisateur
 
 ```http
-PUT /todo/v1/users
+POST /todo/v1/utilisateurs
 ```
 
 | Parameter     | Type   | Description                  |
 |:--------------|:-------|:-----------------------------|
-| `RequestBody` | `user` | **Required**. User to modify |
+| `RequestBody` | `utilisateur` | **Required**. Utilisateur to create |
 
-#### modifierUser()
+#### creerUtilisateur()
 
-Return the modified user
+Return the created utilisateur
 
-### Get status
+### Put utilisateur
 
 ```http
-GET /todo/v1/status
+PUT /todo/v1/utilisateurs
 ```
 
-#### recupererStatus()
+| Parameter     | Type   | Description                  |
+|:--------------|:-------|:-----------------------------|
+| `RequestBody` | `utilisateur` | **Required**. Utilisateur to modify |
 
-Return a list of all status
+#### modifierUtilisateur()
 
-### Post status
+Return the modified utilisateur
+
+### Get progression
 
 ```http
-POST /todo/v1/status
+GET /todo/v1/progression
+```
+
+#### recupererProgressions()
+
+Return a list of all progression
+
+### Post progression
+
+```http
+POST /todo/v1/progression
 ```
 
 | Parameter     | Type     | Description                    |
 |:--------------|:---------|:-------------------------------|
-| `RequestBody` | `status` | **Required**. Status to create |
+| `RequestBody` | `progression` | **Required**. Progression to create |
 
-#### creerStatus()
+#### creerProgression()
 
-Return the created status
+Return the created progression
 
-### Put status
+### Put progression
 
 ```http
-PUT /todo/v1/status
+PUT /todo/v1/progression
 ```
 
 | Parameter     | Type     | Description                    |
 |:--------------|:---------|:-------------------------------|
-| `RequestBody` | `status` | **Required**. Status to modify |
+| `RequestBody` | `progression` | **Required**. Progression to modify |
 
-#### modifierStatus()
+#### modifierProgression()
 
-Return the modified status
+Return the modified progression
 
-### Get tasks
+### Get taches
 
 ```http
-GET /todo/v1/tasks
+GET /todo/v1/taches
 ```
 
-#### recupererTasks()
+#### recupererTaches()
 
-Return a list of all tasks
+Return a list of all taches
 
-### Post task
-
-```http
-POST /todo/v1/tasks
-```
-
-| Parameter     | Type   | Description                  |
-|:--------------|:-------|:-----------------------------|
-| `RequestBody` | `task` | **Required**. Task to create |
-
-#### creerTask()
-
-Return the created task
-
-### Put task
+### Post tache
 
 ```http
-PUT /todo/v1/tasks
+POST /todo/v1/taches
 ```
 
 | Parameter     | Type   | Description                  |
 |:--------------|:-------|:-----------------------------|
-| `RequestBody` | `task` | **Required**. Task to modify |
+| `RequestBody` | `tache` | **Required**. Tache to create |
 
-#### modifierTask()
+#### creerTache()
 
-Return the modified task
+Return the created tache
+
+### Put tache
+
+```http
+PUT /todo/v1/taches
+```
+
+| Parameter     | Type   | Description                  |
+|:--------------|:-------|:-----------------------------|
+| `RequestBody` | `tache` | **Required**. Tache to modify |
+
+#### modifierTache()
+
+Return the modified tache
 
 ## Tech Stack
 

@@ -6,14 +6,18 @@ spring:
     name: Todo App Backend
 
   profiles:
-    default: prod
+    default: dev
 
   jpa:
     hibernate:
       ddl-auto: none
+    show-sql: false
 
-  liquibase:
-    change-log: classpath:/db/changelog/changelog-master.xml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: Admlocal1
+    driver-class-name: org.postgresql.Driver
 
   security:
     user:

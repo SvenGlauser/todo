@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public abstract class Dto<E extends Model> {
 
-    private Long id;
+    private int id;
 
     public Dto(E e) {
         this.id = e.getId();

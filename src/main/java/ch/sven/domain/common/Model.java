@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 public class Model {
 
-    private Long id;
+    private int id;
 }

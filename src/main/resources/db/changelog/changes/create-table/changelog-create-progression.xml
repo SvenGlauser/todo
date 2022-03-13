@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
+
+        <changeSet id="create-table-progression" author="Sven Glauser">
+            <createTable tableName="PROGRESSION"
+                         schemaName="TODO">
+                <column name="ID"
+                        type="INTEGER"
+                        autoIncrement="true"/>
+
+                <column name="NOM"
+                        type="VARCHAR2(255)"/>
+
+                <column name="DESCRIPTION"
+                        type="VARCHAR2(255)"/>
+            </createTable>
+
+            <addPrimaryKey schemaName="TODO"
+                           tableName="PROGRESSION"
+                           columnNames="ID"
+                           constraintName="PK_ID_PROGRESSION"/>
+
+            <addUniqueConstraint schemaName="TODO"
+                                 tableName="PROGRESSION"
+                                 columnNames="NOM"
+                                 constraintName="CT_UN_NOM_PROGRESSION"/>
+        </changeSet>
+</databaseChangeLog>
