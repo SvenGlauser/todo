@@ -26,7 +26,7 @@ public class UserEntity extends Dao<User> {
     private String password;
 
     @OneToMany(mappedBy = "user")
-    private Set<TaskEntity> taskEntitySet;
+    private Set<TacheEntity> taches;
 
     /**
      * Constructeur paramétré

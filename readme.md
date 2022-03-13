@@ -65,81 +65,81 @@ PUT /todo/v1/users
 
 Return the modified user
 
-### Get status
+### Get progression
 
 ```http
-GET /todo/v1/status
+GET /todo/v1/progression
 ```
 
-#### recupererStatus()
+#### recupererProgressions()
 
-Return a list of all status
+Return a list of all progression
 
-### Post status
-
-```http
-POST /todo/v1/status
-```
-
-| Parameter     | Type     | Description                    |
-|:--------------|:---------|:-------------------------------|
-| `RequestBody` | `status` | **Required**. Status to create |
-
-#### creerStatus()
-
-Return the created status
-
-### Put status
+### Post progression
 
 ```http
-PUT /todo/v1/status
+POST /todo/v1/progression
 ```
 
 | Parameter     | Type     | Description                    |
 |:--------------|:---------|:-------------------------------|
-| `RequestBody` | `status` | **Required**. Status to modify |
+| `RequestBody` | `progression` | **Required**. Progression to create |
 
-#### modifierStatus()
+#### creerProgression()
 
-Return the modified status
+Return the created progression
 
-### Get tasks
+### Put progression
 
 ```http
-GET /todo/v1/tasks
+PUT /todo/v1/progression
 ```
 
-#### recupererTasks()
+| Parameter     | Type     | Description                    |
+|:--------------|:---------|:-------------------------------|
+| `RequestBody` | `progression` | **Required**. Progression to modify |
 
-Return a list of all tasks
+#### modifierProgression()
 
-### Post task
+Return the modified progression
+
+### Get taches
 
 ```http
-POST /todo/v1/tasks
+GET /todo/v1/taches
+```
+
+#### recupererTaches()
+
+Return a list of all taches
+
+### Post tache
+
+```http
+POST /todo/v1/taches
 ```
 
 | Parameter     | Type   | Description                  |
 |:--------------|:-------|:-----------------------------|
-| `RequestBody` | `task` | **Required**. Task to create |
+| `RequestBody` | `tache` | **Required**. Tache to create |
 
-#### creerTask()
+#### creerTache()
 
-Return the created task
+Return the created tache
 
-### Put task
+### Put tache
 
 ```http
-PUT /todo/v1/tasks
+PUT /todo/v1/taches
 ```
 
 | Parameter     | Type   | Description                  |
 |:--------------|:-------|:-----------------------------|
-| `RequestBody` | `task` | **Required**. Task to modify |
+| `RequestBody` | `tache` | **Required**. Tache to modify |
 
-#### modifierTask()
+#### modifierTache()
 
-Return the modified task
+Return the modified tache
 
 ## Tech Stack
 

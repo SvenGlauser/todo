@@ -7,7 +7,7 @@
 
     <changeSet id="load-data-user" author="Sven Glauser">
         <loadData schemaName="todo"
-                  tableName="tb_user"
+                  tableName="USER"
                   file="db/changelog/data/users.csv"
                   separator=","/>
     </changeSet>

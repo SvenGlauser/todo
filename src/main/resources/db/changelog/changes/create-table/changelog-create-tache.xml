@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
+
+    <changeSet id="create-table-tache" author="Sven Glauser">
+        <createTable tableName="TACHE"
+                     schemaName="todo">
+            <column name="ID"
+                    type="INTEGER"
+                    autoIncrement="true"/>
+
+            <column name="NOM"
+                    type="VARCHAR2(255)"/>
+
+            <column name="DESCRIPTION"
+                    type="VARCHAR2(255)"/>
+
+            <column name="USER"
+                    type="INTEGER"/>
+
+            <column name="PROGRESSION"
+                    type="INTEGER"/>
+        </createTable>
+
+        <addPrimaryKey schemaName="todo"
+                       tableName="TACHE"
+                       columnNames="ID"
+                       constraintName="PK_ID_TACHE"/>
+
+        <addForeignKeyConstraint baseTableSchemaName="todo"
+                                 baseTableName="TACHE"
+                                 baseColumnNames="USER"
+                                 constraintName="CT_FK_USER_TACHE"
+                                 referencedTableSchemaName="todo"
+                                 referencedTableName="USER"
+                                 referencedColumnNames="ID"/>
+
+        <addForeignKeyConstraint baseTableSchemaName="todo"
+                                 baseTableName="TACHE"
+                                 baseColumnNames="PROGRESSION"
+                                 constraintName="CT_FK_PROGRESSION_TACHE"
+                                 referencedTableSchemaName="todo"
+                                 referencedTableName="PROGRESSION"
+                                 referencedColumnNames="ID"/>
+    </changeSet>
+</databaseChangeLog>

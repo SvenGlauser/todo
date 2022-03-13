@@ -5,9 +5,11 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
-    <!-- Changes to include -->
-    <include file="db/changelog/changes/load-data/changelog-load-data-progression.xml"/>
-    <include file="db/changelog/changes/load-data/changelog-load-data-user.xml"/>
-    <include file="db/changelog/changes/load-data/changelog-load-data-tache.xml"/>
+    <changeSet id="load-data-tache" author="Sven Glauser">
+        <loadData schemaName="todo"
+                  tableName="TACHE"
+                  file="db/changelog/data/taches.csv"
+                  separator=","/>
+    </changeSet>
 
 </databaseChangeLog>

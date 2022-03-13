@@ -6,27 +6,27 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
     <changeSet id="create-table-user" author="Sven Glauser">
-        <createTable tableName="tb_user"
+        <createTable tableName="USER"
                      schemaName="todo">
-            <column name="id"
+            <column name="ID"
                     type="INTEGER"
                     autoIncrement="true"/>
 
-            <column name="username"
+            <column name="USERNAME"
                     type="VARCHAR2(255)"/>
 
-            <column name="password"
+            <column name="PASSWORD"
                     type="VARCHAR2(255)"/>
         </createTable>
 
         <addPrimaryKey schemaName="todo"
-                       tableName="tb_user"
-                       columnNames="id"
-                       constraintName="pk_id_tb_user"/>
+                       tableName="USER"
+                       columnNames="ID"
+                       constraintName="PK_ID_USER"/>
 
         <addUniqueConstraint schemaName="todo"
-                             tableName="tb_user"
-                             columnNames="username"
-                             constraintName="ct_un_username_tb_user"/>
+                             tableName="USER"
+                             columnNames="USERNAME"
+                             constraintName="CT_UN_USERNAME"/>
     </changeSet>
 </databaseChangeLog>
