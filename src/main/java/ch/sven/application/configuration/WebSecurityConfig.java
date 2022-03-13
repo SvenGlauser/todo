@@ -1,21 +1,19 @@
 package ch.sven.application.configuration;
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.List;
 
@@ -25,6 +23,7 @@ import java.util.List;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final DataSource datasource;
+    private final EntityManager entityManager;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -54,7 +53,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication()
-                .dataSource(datasource);
+                .dataSource(datasource)
+                .usersByUsernameQuery("SELECT username, password, enabled\n" +
+                                      "FROM todo.utilisateur\n" +
+                                      "WHERE username = ?")
+                .authoritiesByUsernameQuery("SELECT u.username as username, authority as role\n" +
+                                            "FROM todo.authority\n" +
+                                            "INNER JOIN todo.utilisateur u on u.id = authority.utilisateur\n" +
+                                            "WHERE u.username = ?");
     }
 
     @Bean
