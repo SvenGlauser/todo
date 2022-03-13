@@ -15,6 +15,7 @@
         <lombok-verison>1.18.22</lombok-verison>
         <postgres-version>42.3.3</postgres-version>
         <liquibase-version>4.8.0</liquibase-version>
+        <springdoc-version>1.6.6</springdoc-version>
     </properties>
 
     <dependencies>
@@ -47,6 +48,17 @@
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <version>${liquibase-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
