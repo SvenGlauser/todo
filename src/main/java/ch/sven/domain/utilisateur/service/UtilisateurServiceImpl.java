@@ -1,8 +1,8 @@
 package ch.sven.domain.utilisateur.service;
 
 import ch.sven.domain.utilisateur.model.Utilisateur;
-import ch.sven.infrastructure.entity.UtilisateurEntity;
 import ch.sven.domain.utilisateur.repository.UtilisateurRepository;
+import ch.sven.infrastructure.entity.UtilisateurEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

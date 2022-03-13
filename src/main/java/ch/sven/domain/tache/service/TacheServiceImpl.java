@@ -1,8 +1,8 @@
 package ch.sven.domain.tache.service;
 
 import ch.sven.domain.tache.model.Tache;
-import ch.sven.infrastructure.entity.TacheEntity;
 import ch.sven.domain.tache.repository.TacheRepository;
+import ch.sven.infrastructure.entity.TacheEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

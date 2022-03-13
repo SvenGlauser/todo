@@ -13,7 +13,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.List;
 
@@ -23,7 +22,6 @@ import java.util.List;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final DataSource datasource;
-    private final EntityManager entityManager;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

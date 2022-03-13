@@ -1,8 +1,8 @@
 package ch.sven.domain.progression.service;
 
 import ch.sven.domain.progression.model.Progression;
-import ch.sven.infrastructure.entity.ProgressionEntity;
 import ch.sven.domain.progression.repository.ProgressionRepository;
+import ch.sven.infrastructure.entity.ProgressionEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
