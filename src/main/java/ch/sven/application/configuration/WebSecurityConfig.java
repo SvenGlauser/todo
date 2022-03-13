@@ -34,9 +34,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Enable Basic Auth
         http
             .authorizeRequests()
-            .anyRequest().authenticated()
-            .and()
-            .httpBasic();
+                .antMatchers("/swagger-ui/*").permitAll()
+                .antMatchers("/v3/api-docs").permitAll()
+                .antMatchers("/v3/api-docs/*").permitAll()
+            .anyRequest()
+                .authenticated().and().httpBasic();
 
         // Interdire la création de session
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
