@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class UtilisateurDto extends Dto<Utilisateur> {
-    private String utilisateurname;
+    private String username;
     private String password;
 
     /**
@@ -19,14 +19,14 @@ public class UtilisateurDto extends Dto<Utilisateur> {
      */
     public UtilisateurDto(Utilisateur utilisateur) {
         super(utilisateur);
-        this.utilisateurname = utilisateur.getUtilisateurname();
+        this.username = utilisateur.getUsername();
         this.password = utilisateur.getPassword();
     }
 
     @Override
     public Utilisateur toDomaineEntity() {
         Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setUtilisateurname(this.utilisateurname);
+        utilisateur.setUsername(this.username);
         utilisateur.setPassword(this.password);
         return utilisateur;
     }

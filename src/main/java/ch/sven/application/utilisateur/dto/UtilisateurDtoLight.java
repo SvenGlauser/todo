@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class UtilisateurDtoLight extends Dto<Utilisateur> {
-    private String utilisateurname;
+    private String username;
 
     /**
      * Constructeur paramétré
@@ -18,13 +18,13 @@ public class UtilisateurDtoLight extends Dto<Utilisateur> {
      */
     public UtilisateurDtoLight(Utilisateur utilisateur) {
         super(utilisateur);
-        this.utilisateurname = utilisateur.getUtilisateurname();
+        this.username = utilisateur.getUsername();
     }
 
     @Override
     public Utilisateur toDomaineEntity() {
         Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setUtilisateurname(this.utilisateurname);
+        utilisateur.setUsername(this.username);
         return utilisateur;
     }
 }

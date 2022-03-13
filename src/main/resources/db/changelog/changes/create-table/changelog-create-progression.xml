@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
-        <changeSet id="create-table-progression" author="Sven Glautilisateur">
+        <changeSet id="create-table-progression" author="Sven Glauser">
             <createTable tableName="PROGRESSION"
                          schemaName="TODO">
                 <column name="ID"

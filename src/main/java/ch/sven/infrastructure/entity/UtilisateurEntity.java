@@ -19,8 +19,8 @@ import java.util.Set;
 @NoArgsConstructor
 public class UtilisateurEntity extends Dao<Utilisateur> {
 
-    @Column(name = "UTILISATEURNAME")
-    private String utilisateurname;
+    @Column(name = "USERNAME")
+    private String username;
 
     @Column(name = "PASSWORD")
     private String password;
@@ -33,14 +33,14 @@ public class UtilisateurEntity extends Dao<Utilisateur> {
      */
     public UtilisateurEntity(Utilisateur utilisateur) {
         super(utilisateur);
-        this.utilisateurname = utilisateur.getUtilisateurname();
+        this.username = utilisateur.getUsername();
         this.password = utilisateur.getPassword();
     }
 
     @Override
     public Utilisateur toDomaineEntity() {
         Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setUtilisateurname(this.utilisateurname);
+        utilisateur.setUsername(this.username);
         utilisateur.setPassword(this.password);
         return utilisateur;
     }

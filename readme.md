@@ -5,7 +5,7 @@ Backend for a todo list application
 
 ## Authors
 
-- [@SvenGlautilisateur](https://www.github.com/svenglautilisateur)
+- [@SvenGlauser](https://www.github.com/svenGlauser)
 
 ## Deploy application
 
