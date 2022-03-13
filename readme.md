@@ -5,7 +5,7 @@ Backend for a todo list application
 
 ## Authors
 
-- [@SvenGlauser](https://www.github.com/svenglauser)
+- [@SvenGlautilisateur](https://www.github.com/svenglautilisateur)
 
 ## Deploy application
 
@@ -27,43 +27,43 @@ Backend for a todo list application
 
 ## API Reference
 
-### Get users
+### Get utilisateurs
 
 ```http
-GET /todo/v1/users
+GET /todo/v1/utilisateurs
 ```
 
-#### recupererUsers()
+#### recupererUtilisateurs()
 
-Return a list of all users
+Return a list of all utilisateurs
 
-### Post user
-
-```http
-POST /todo/v1/users
-```
-
-| Parameter     | Type   | Description                  |
-|:--------------|:-------|:-----------------------------|
-| `RequestBody` | `user` | **Required**. User to create |
-
-#### creerUser()
-
-Return the created user
-
-### Put user
+### Post utilisateur
 
 ```http
-PUT /todo/v1/users
+POST /todo/v1/utilisateurs
 ```
 
 | Parameter     | Type   | Description                  |
 |:--------------|:-------|:-----------------------------|
-| `RequestBody` | `user` | **Required**. User to modify |
+| `RequestBody` | `utilisateur` | **Required**. Utilisateur to create |
 
-#### modifierUser()
+#### creerUtilisateur()
 
-Return the modified user
+Return the created utilisateur
+
+### Put utilisateur
+
+```http
+PUT /todo/v1/utilisateurs
+```
+
+| Parameter     | Type   | Description                  |
+|:--------------|:-------|:-----------------------------|
+| `RequestBody` | `utilisateur` | **Required**. Utilisateur to modify |
+
+#### modifierUtilisateur()
+
+Return the modified utilisateur
 
 ### Get progression
 

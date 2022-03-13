@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
-    <changeSet id="create-table-tache" author="Sven Glauser">
+    <changeSet id="create-table-tache" author="Sven Glautilisateur">
         <createTable tableName="TACHE"
                      schemaName="todo">
             <column name="ID"
@@ -18,7 +18,7 @@
             <column name="DESCRIPTION"
                     type="VARCHAR2(255)"/>
 
-            <column name="USER"
+            <column name="UTILISATEUR"
                     type="INTEGER"/>
 
             <column name="PROGRESSION"
@@ -32,10 +32,10 @@
 
         <addForeignKeyConstraint baseTableSchemaName="todo"
                                  baseTableName="TACHE"
-                                 baseColumnNames="USER"
-                                 constraintName="CT_FK_USER_TACHE"
+                                 baseColumnNames="UTILISATEUR"
+                                 constraintName="CT_FK_UTILISATEUR_TACHE"
                                  referencedTableSchemaName="todo"
-                                 referencedTableName="USER"
+                                 referencedTableName="UTILISATEUR"
                                  referencedColumnNames="ID"/>
 
         <addForeignKeyConstraint baseTableSchemaName="todo"

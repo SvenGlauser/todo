@@ -2,7 +2,7 @@ package ch.sven.application.tache.dto;
 
 import ch.sven.application.common.Dto;
 import ch.sven.application.progression.dto.ProgressionDto;
-import ch.sven.application.user.dto.UserDto;
+import ch.sven.application.utilisateur.dto.UtilisateurDto;
 import ch.sven.domain.tache.model.Tache;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ import java.util.Optional;
 public class TacheDto extends Dto<Tache> {
     private String nom;
     private String description;
-    private UserDto user;
+    private UtilisateurDto utilisateur;
     private ProgressionDto progression;
 
     /**
@@ -27,7 +27,7 @@ public class TacheDto extends Dto<Tache> {
         super(tache);
         this.nom = tache.getNom();
         this.description = tache.getDescription();
-        this.user = Optional.of(tache.getUser()).map(UserDto::new).orElse(null);
+        this.utilisateur = Optional.of(tache.getUtilisateur()).map(UtilisateurDto::new).orElse(null);
         this.progression = Optional.of(tache.getProgression()).map(ProgressionDto::new).orElse(null);
     }
 
@@ -36,7 +36,7 @@ public class TacheDto extends Dto<Tache> {
         Tache tache = new Tache();
         tache.setNom(this.nom);
         tache.setDescription(this.description);
-        tache.setUser(this.user.toDomaine());
+        tache.setUtilisateur(this.utilisateur.toDomaine());
         tache.setProgression(this.progression.toDomaine());
         return tache;
     }

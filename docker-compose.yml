@@ -4,7 +4,7 @@ services:
     container_name: database
     image: postgres:latest
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_UTILISATEUR: postgres
       POSTGRES_PASSWORD: Admlocal1
     hostname: 0.0.0.0
     ports:

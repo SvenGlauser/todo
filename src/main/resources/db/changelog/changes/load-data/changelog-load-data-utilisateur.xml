@@ -5,10 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
-    <changeSet id="load-data-user" author="Sven Glauser">
+    <changeSet id="load-data-utilisateur" author="Sven Glautilisateur">
         <loadData schemaName="todo"
-                  tableName="USER"
-                  file="db/changelog/data/users.csv"
+                  tableName="UTILISATEUR"
+                  file="db/changelog/data/utilisateurs.csv"
                   separator=","/>
     </changeSet>
 

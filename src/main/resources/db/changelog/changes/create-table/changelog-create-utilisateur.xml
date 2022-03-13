@@ -5,14 +5,14 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
-    <changeSet id="create-table-user" author="Sven Glauser">
-        <createTable tableName="USER"
+    <changeSet id="create-table-utilisateur" author="Sven Glautilisateur">
+        <createTable tableName="UTILISATEUR"
                      schemaName="todo">
             <column name="ID"
                     type="INTEGER"
                     autoIncrement="true"/>
 
-            <column name="USERNAME"
+            <column name="UTILISATEURNAME"
                     type="VARCHAR2(255)"/>
 
             <column name="PASSWORD"
@@ -20,13 +20,13 @@
         </createTable>
 
         <addPrimaryKey schemaName="todo"
-                       tableName="USER"
+                       tableName="UTILISATEUR"
                        columnNames="ID"
-                       constraintName="PK_ID_USER"/>
+                       constraintName="PK_ID_UTILISATEUR"/>
 
         <addUniqueConstraint schemaName="todo"
-                             tableName="USER"
-                             columnNames="USERNAME"
-                             constraintName="CT_UN_USERNAME"/>
+                             tableName="UTILISATEUR"
+                             columnNames="UTILISATEURNAME"
+                             constraintName="CT_UN_UTILISATEURNAME"/>
     </changeSet>
 </databaseChangeLog>

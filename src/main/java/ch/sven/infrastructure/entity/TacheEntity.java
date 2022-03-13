@@ -22,13 +22,13 @@ public class TacheEntity extends Dao<Tache> {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @ManyToOne(targetEntity = UserEntity.class)
-    @JoinColumn(name = "USER")
-    private UserEntity user;
-
     @ManyToOne(targetEntity = ProgressionEntity.class)
     @JoinColumn(name = "PROGRESSION")
     private ProgressionEntity progression;
+
+    @ManyToOne(targetEntity = UtilisateurEntity.class)
+    @JoinColumn(name = "UTILISATEUR")
+    private UtilisateurEntity utilisateur;
 
     /**
      * Constructeur paramétré
@@ -37,7 +37,7 @@ public class TacheEntity extends Dao<Tache> {
         super(tache);
         this.description = tache.getDescription();
         this.nom = tache.getNom();
-        this.user = Optional.of(tache.getUser()).map(UserEntity::new).orElse(null);
+        this.utilisateur = Optional.of(tache.getUtilisateur()).map(UtilisateurEntity::new).orElse(null);
         this.progression = Optional.of(tache.getProgression()).map(ProgressionEntity::new).orElse(null);
     }
 
@@ -46,7 +46,7 @@ public class TacheEntity extends Dao<Tache> {
         Tache tache = new Tache();
         tache.setDescription(this.description);
         tache.setNom(this.nom);
-        tache.setUser(this.user.toDomaine());
+        tache.setUtilisateur(this.utilisateur.toDomaine());
         tache.setProgression(this.progression.toDomaine());
         return tache;
     }
