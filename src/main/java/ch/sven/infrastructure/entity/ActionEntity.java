@@ -15,7 +15,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(name = "ACTION", schema = "analitycs")
+@Table(name = "ACTION", schema = "analytics")
 @NoArgsConstructor
 public class ActionEntity extends Dao<Action> {
 

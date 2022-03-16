@@ -1,7 +1,7 @@
 
-# analitycs App Backend
+# analytics App Backend
 
-Backend for a analitycs list application
+Backend for a analytics list application
 
 ## Authors
 
@@ -19,7 +19,7 @@ Backend for a analitycs list application
 
 #### Docker create image 
 
-`docker build -t analitycs-backend .`
+`docker build -t analytics-backend .`
 
 #### Docker compose image with postgresql 
 
@@ -30,7 +30,7 @@ Backend for a analitycs list application
 ### Get utilisateurs
 
 ```http
-GET /analitycs/v1/utilisateurs
+GET /analytics/v1/utilisateurs
 ```
 
 #### recupererUtilisateurs()
@@ -40,7 +40,7 @@ Return a list of all utilisateurs
 ### Post utilisateur
 
 ```http
-POST /analitycs/v1/utilisateurs
+POST /analytics/v1/utilisateurs
 ```
 
 | Parameter     | Type   | Description                  |
@@ -54,7 +54,7 @@ Return the created utilisateur
 ### Put utilisateur
 
 ```http
-PUT /analitycs/v1/utilisateurs
+PUT /analytics/v1/utilisateurs
 ```
 
 | Parameter     | Type   | Description                  |
@@ -68,7 +68,7 @@ Return the modified utilisateur
 ### Get enregistrement
 
 ```http
-GET /analitycs/v1/enregistrement
+GET /analytics/v1/enregistrement
 ```
 
 #### recupererEnregistrements()
@@ -78,7 +78,7 @@ Return a list of all enregistrement
 ### Post enregistrement
 
 ```http
-POST /analitycs/v1/enregistrement
+POST /analytics/v1/enregistrement
 ```
 
 | Parameter     | Type     | Description                    |
@@ -92,7 +92,7 @@ Return the created enregistrement
 ### Put enregistrement
 
 ```http
-PUT /analitycs/v1/enregistrement
+PUT /analytics/v1/enregistrement
 ```
 
 | Parameter     | Type     | Description                    |
@@ -106,7 +106,7 @@ Return the modified enregistrement
 ### Get actions
 
 ```http
-GET /analitycs/v1/actions
+GET /analytics/v1/actions
 ```
 
 #### recupererActions()
@@ -116,7 +116,7 @@ Return a list of all actions
 ### Post action
 
 ```http
-POST /analitycs/v1/actions
+POST /analytics/v1/actions
 ```
 
 | Parameter     | Type   | Description                  |
@@ -130,7 +130,7 @@ Return the created action
 ### Put action
 
 ```http
-PUT /analitycs/v1/actions
+PUT /analytics/v1/actions
 ```
 
 | Parameter     | Type   | Description                  |

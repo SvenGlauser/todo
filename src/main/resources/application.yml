@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: Analitycs App Backend
+    name: Analytics App Backend
 
   profiles:
     default: dev

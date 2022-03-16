@@ -7,7 +7,7 @@
 
     <changeSet id="create-table-utilisateur" author="Sven Glauser">
         <createTable tableName="UTILISATEUR"
-                     schemaName="analitycs">
+                     schemaName="analytics">
             <column name="ID"
                     type="INTEGER"
                     autoIncrement="true"/>
@@ -22,12 +22,12 @@
                     type="BOOLEAN"/>
         </createTable>
 
-        <addPrimaryKey schemaName="analitycs"
+        <addPrimaryKey schemaName="analytics"
                        tableName="UTILISATEUR"
                        columnNames="ID"
                        constraintName="PK_ID_UTILISATEUR"/>
 
-        <addUniqueConstraint schemaName="analitycs"
+        <addUniqueConstraint schemaName="analytics"
                              tableName="UTILISATEUR"
                              columnNames="USERNAME"
                              constraintName="CT_UN_USERNAME_UTILISATEUR"/>

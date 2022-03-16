@@ -7,7 +7,7 @@
 
     <changeSet id="create-table-action" author="Sven Glauser">
         <createTable tableName="ACTION"
-                     schemaName="analitycs">
+                     schemaName="analytics">
             <column name="ID"
                     type="INTEGER"
                     autoIncrement="true"/>
@@ -19,7 +19,7 @@
                     type="VARCHAR2(255)"/>
         </createTable>
 
-        <addPrimaryKey schemaName="analitycs"
+        <addPrimaryKey schemaName="analytics"
                        tableName="ACTION"
                        columnNames="ID"
                        constraintName="PK_ID_ACTION"/>

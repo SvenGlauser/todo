@@ -6,7 +6,7 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
     <changeSet id="load-data-enregistrement" author="Sven Glauser">
-        <loadData schemaName="analitycs"
+        <loadData schemaName="analytics"
                   tableName="ENREGISTREMENT"
                   file="db/changelog/data/enregistrements.csv"
                   separator=","/>

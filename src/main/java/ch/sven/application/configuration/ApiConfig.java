@@ -1,5 +1,5 @@
 package ch.sven.application.configuration;
 
 public class ApiConfig {
-    public static final String API_URL = "/analitycs/v1";
+    public static final String API_URL = "/analytics/v1";
 }
