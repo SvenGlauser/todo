@@ -69,15 +69,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static String getRoleRequest() {
         return "SELECT u.username, role.role\n" +
-                "FROM todo.role\n" +
-                "INNER JOIN todo.role_utilisateur ru on role.id = ru.role\n" +
-                "INNER JOIN todo.utilisateur u on u.id = ru.utilisateur\n" +
+                "FROM analitycs.role\n" +
+                "INNER JOIN analitycs.role_utilisateur ru on role.id = ru.role\n" +
+                "INNER JOIN analitycs.utilisateur u on u.id = ru.utilisateur\n" +
                 "WHERE u.username = ?";
     }
 
     private static String getUserRequest() {
         return "SELECT username, password, enabled\n" +
-                "FROM todo.utilisateur\n" +
+                "FROM analitycs.utilisateur\n" +
                 "WHERE username = ?";
     }
 }

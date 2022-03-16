@@ -5,31 +5,23 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
-    <changeSet id="create-table-utilisateur" author="Sven Glauser">
-        <createTable tableName="UTILISATEUR"
+    <changeSet id="create-table-action" author="Sven Glauser">
+        <createTable tableName="ACTION"
                      schemaName="analitycs">
             <column name="ID"
                     type="INTEGER"
                     autoIncrement="true"/>
 
-            <column name="USERNAME"
+            <column name="NOM"
                     type="VARCHAR2(255)"/>
 
-            <column name="PASSWORD"
+            <column name="DESCRIPTION"
                     type="VARCHAR2(255)"/>
-
-            <column name="ENABLED"
-                    type="BOOLEAN"/>
         </createTable>
 
         <addPrimaryKey schemaName="analitycs"
-                       tableName="UTILISATEUR"
+                       tableName="ACTION"
                        columnNames="ID"
-                       constraintName="PK_ID_UTILISATEUR"/>
-
-        <addUniqueConstraint schemaName="analitycs"
-                             tableName="UTILISATEUR"
-                             columnNames="USERNAME"
-                             constraintName="CT_UN_USERNAME_UTILISATEUR"/>
+                       constraintName="PK_ID_ACTION"/>
     </changeSet>
 </databaseChangeLog>

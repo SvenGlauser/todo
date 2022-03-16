@@ -5,10 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
-    <changeSet id="load-data-role" author="Sven Glauser">
+    <changeSet id="load-data-action" author="Sven Glauser">
         <loadData schemaName="analitycs"
-                  tableName="ROLE"
-                  file="db/changelog/data/roles.csv"
+                  tableName="ACTION"
+                  file="db/changelog/data/actions.csv"
                   separator=","/>
     </changeSet>
 

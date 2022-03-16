@@ -7,7 +7,7 @@
 
     <changeSet id="create-table-role" author="Sven Glauser">
         <createTable tableName="ROLE"
-                     schemaName="TODO">
+                     schemaName="ANALITYCS">
 
             <column name="ID"
                     type="INTEGER"
@@ -18,7 +18,7 @@
 
         </createTable>
 
-        <addPrimaryKey schemaName="TODO"
+        <addPrimaryKey schemaName="ANALITYCS"
                        tableName="ROLE"
                        columnNames="ID"
                        constraintName="PK_ID_ROLE"/>
