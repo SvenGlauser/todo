@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.sven</groupId>
-    <artifactId>analytics</artifactId>
+    <artifactId>analitycs</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -80,6 +80,6 @@
                 </executions>
             </plugin>
         </plugins>
-        <finalName>analytics-backend</finalName>
+        <finalName>analitycs-backend</finalName>
     </build>
 </project>

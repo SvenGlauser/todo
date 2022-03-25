@@ -7,7 +7,7 @@
 
     <changeSet id="create-table-role-utilisateur" author="Sven Glauser">
         <createTable tableName="ROLE_UTILISATEUR"
-                     schemaName="ANALYTICS">
+                     schemaName="ANALITYCS">
 
             <column name="ROLE"
                     type="INTEGER"/>
@@ -16,24 +16,24 @@
                     type="INTEGER"/>
         </createTable>
 
-        <addPrimaryKey schemaName="ANALYTICS"
+        <addPrimaryKey schemaName="ANALITYCS"
                        tableName="ROLE_UTILISATEUR"
                        columnNames="ROLE, UTILISATEUR"
                        constraintName="PK_ROLE_UTILISATEUR"/>
 
-        <addForeignKeyConstraint baseTableSchemaName="analytics"
+        <addForeignKeyConstraint baseTableSchemaName="analitycs"
                                  baseTableName="ROLE_UTILISATEUR"
                                  baseColumnNames="UTILISATEUR"
                                  constraintName="FK_UTILISATEUR_ROLE_UTILISATEUR"
-                                 referencedTableSchemaName="analytics"
+                                 referencedTableSchemaName="analitycs"
                                  referencedTableName="UTILISATEUR"
                                  referencedColumnNames="ID"/>
 
-        <addForeignKeyConstraint baseTableSchemaName="analytics"
+        <addForeignKeyConstraint baseTableSchemaName="analitycs"
                                  baseTableName="ROLE_UTILISATEUR"
                                  baseColumnNames="ROLE"
                                  constraintName="FK_ROLE_ROLE_UTILISATEUR"
-                                 referencedTableSchemaName="analytics"
+                                 referencedTableSchemaName="analitycs"
                                  referencedTableName="ROLE"
                                  referencedColumnNames="ID"/>
     </changeSet>

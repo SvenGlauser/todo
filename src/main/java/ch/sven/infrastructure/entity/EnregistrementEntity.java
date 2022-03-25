@@ -13,7 +13,7 @@ import java.util.Optional;
 @Getter
 @Setter
 @Entity
-@Table(name = "ENREGISTREMENT", schema = "analytics")
+@Table(name = "ENREGISTREMENT", schema = "analitycs")
 @NoArgsConstructor
 public class EnregistrementEntity extends Dao<Enregistrement> {
 

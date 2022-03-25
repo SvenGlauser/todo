@@ -7,7 +7,7 @@
 
         <changeSet id="create-table-enregistrement" author="Sven Glauser">
             <createTable tableName="ENREGISTREMENT"
-                         schemaName="ANALYTICS">
+                         schemaName="ANALITYCS">
                 <column name="ID"
                         type="INTEGER"
                         autoIncrement="true"/>
@@ -22,24 +22,24 @@
                         type="INTEGER"/>
             </createTable>
 
-            <addPrimaryKey schemaName="ANALYTICS"
+            <addPrimaryKey schemaName="ANALITYCS"
                            tableName="ENREGISTREMENT"
                            columnNames="ID"
                            constraintName="PK_ID_ENREGISTREMENT"/>
 
-            <addForeignKeyConstraint baseTableSchemaName="analytics"
+            <addForeignKeyConstraint baseTableSchemaName="analitycs"
                                      baseTableName="ENREGISTREMENT"
                                      baseColumnNames="UTILISATEUR"
                                      constraintName="FK_ENREGISTREMENT_UTILISATEUR"
-                                     referencedTableSchemaName="analytics"
+                                     referencedTableSchemaName="analitycs"
                                      referencedTableName="UTILISATEUR"
                                      referencedColumnNames="ID"/>
 
-            <addForeignKeyConstraint baseTableSchemaName="analytics"
+            <addForeignKeyConstraint baseTableSchemaName="analitycs"
                                      baseTableName="ENREGISTREMENT"
                                      baseColumnNames="ACTION"
                                      constraintName="FK_ENREGISTREMENT_ACTION"
-                                     referencedTableSchemaName="analytics"
+                                     referencedTableSchemaName="analitycs"
                                      referencedTableName="ACTION"
                                      referencedColumnNames="ID"/>
         </changeSet>
