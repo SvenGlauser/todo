@@ -1,7 +1,7 @@
 
-# analitycs App Backend
+# Todo App Backend
 
-Backend for a analitycs list application
+Backend for a todo list application
 
 ## Authors
 
@@ -19,7 +19,7 @@ Backend for a analitycs list application
 
 #### Docker create image 
 
-`docker build -t analitycs-backend .`
+`docker build -t todo-backend .`
 
 #### Docker compose image with postgresql 
 
@@ -30,7 +30,7 @@ Backend for a analitycs list application
 ### Get utilisateurs
 
 ```http
-GET /analitycs/v1/utilisateurs
+GET /todo/v1/utilisateurs
 ```
 
 #### recupererUtilisateurs()
@@ -40,7 +40,7 @@ Return a list of all utilisateurs
 ### Post utilisateur
 
 ```http
-POST /analitycs/v1/utilisateurs
+POST /todo/v1/utilisateurs
 ```
 
 | Parameter     | Type   | Description                  |
@@ -54,7 +54,7 @@ Return the created utilisateur
 ### Put utilisateur
 
 ```http
-PUT /analitycs/v1/utilisateurs
+PUT /todo/v1/utilisateurs
 ```
 
 | Parameter     | Type   | Description                  |
@@ -65,81 +65,81 @@ PUT /analitycs/v1/utilisateurs
 
 Return the modified utilisateur
 
-### Get enregistrement
+### Get progression
 
 ```http
-GET /analitycs/v1/enregistrement
+GET /todo/v1/progression
 ```
 
-#### recupererEnregistrements()
+#### recupererProgressions()
 
-Return a list of all enregistrement
+Return a list of all progression
 
-### Post enregistrement
-
-```http
-POST /analitycs/v1/enregistrement
-```
-
-| Parameter     | Type     | Description                    |
-|:--------------|:---------|:-------------------------------|
-| `RequestBody` | `enregistrement` | **Required**. Enregistrement to create |
-
-#### creerEnregistrement()
-
-Return the created enregistrement
-
-### Put enregistrement
+### Post progression
 
 ```http
-PUT /analitycs/v1/enregistrement
+POST /todo/v1/progression
 ```
 
 | Parameter     | Type     | Description                    |
 |:--------------|:---------|:-------------------------------|
-| `RequestBody` | `enregistrement` | **Required**. Enregistrement to modify |
+| `RequestBody` | `progression` | **Required**. Progression to create |
 
-#### modifierEnregistrement()
+#### creerProgression()
 
-Return the modified enregistrement
+Return the created progression
 
-### Get actions
+### Put progression
 
 ```http
-GET /analitycs/v1/actions
+PUT /todo/v1/progression
 ```
 
-#### recupererActions()
+| Parameter     | Type     | Description                    |
+|:--------------|:---------|:-------------------------------|
+| `RequestBody` | `progression` | **Required**. Progression to modify |
 
-Return a list of all actions
+#### modifierProgression()
 
-### Post action
+Return the modified progression
+
+### Get taches
 
 ```http
-POST /analitycs/v1/actions
+GET /todo/v1/taches
+```
+
+#### recupererTaches()
+
+Return a list of all taches
+
+### Post tache
+
+```http
+POST /todo/v1/taches
 ```
 
 | Parameter     | Type   | Description                  |
 |:--------------|:-------|:-----------------------------|
-| `RequestBody` | `action` | **Required**. Action to create |
+| `RequestBody` | `tache` | **Required**. Tache to create |
 
-#### creerAction()
+#### creerTache()
 
-Return the created action
+Return the created tache
 
-### Put action
+### Put tache
 
 ```http
-PUT /analitycs/v1/actions
+PUT /todo/v1/taches
 ```
 
 | Parameter     | Type   | Description                  |
 |:--------------|:-------|:-----------------------------|
-| `RequestBody` | `action` | **Required**. Action to modify |
+| `RequestBody` | `tache` | **Required**. Tache to modify |
 
-#### modifierAction()
+#### modifierTache()
 
-Return the modified action
+Return the modified tache
 
 ## Tech Stack
 

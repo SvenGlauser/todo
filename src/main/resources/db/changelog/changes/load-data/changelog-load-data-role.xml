@@ -6,7 +6,7 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
 
     <changeSet id="load-data-role" author="Sven Glauser">
-        <loadData schemaName="analitycs"
+        <loadData schemaName="todo"
                   tableName="ROLE"
                   file="db/changelog/data/roles.csv"
                   separator=","/>

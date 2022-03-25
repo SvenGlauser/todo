@@ -8,8 +8,8 @@
     <!-- Changes to include -->
     <include file="db/changelog/schema.sql"/>
     <include file="db/changelog/changes/create-table/changelog-create-utilisateur.xml"/>
-    <include file="db/changelog/changes/create-table/changelog-create-action.xml"/>
-    <include file="db/changelog/changes/create-table/changelog-create-enregistrement.xml"/>
+    <include file="db/changelog/changes/create-table/changelog-create-progression.xml"/>
+    <include file="db/changelog/changes/create-table/changelog-create-tache.xml"/>
     <include file="db/changelog/changes/create-table/changelog-create-role.xml"/>
     <include file="db/changelog/changes/create-table/changelog-create-role-utilisateur.xml"/>
 

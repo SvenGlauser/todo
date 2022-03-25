@@ -15,7 +15,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(name = "UTILISATEUR", schema = "analitycs")
+@Table(name = "UTILISATEUR", schema = "TODO")
 @NoArgsConstructor
 public class UtilisateurEntity extends Dao<Utilisateur> {
 
@@ -26,7 +26,7 @@ public class UtilisateurEntity extends Dao<Utilisateur> {
     private String password;
 
     @OneToMany(mappedBy = "utilisateur")
-    private Set<EnregistrementEntity> enregistrements;
+    private Set<TacheEntity> taches;
 
     /**
      * Constructeur paramétré
