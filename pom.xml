@@ -6,80 +6,83 @@
 
     <groupId>ch.sven</groupId>
     <artifactId>todo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>todo-application</module>
+        <module>todo-domain</module>
+        <module>todo-infrastructure</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <spring-verison>2.6.4</spring-verison>
+        <spring-verison>2.6.6</spring-verison>
         <lombok-verison>1.18.22</lombok-verison>
         <postgres-version>42.3.3</postgres-version>
-        <liquibase-version>4.8.0</liquibase-version>
-        <springdoc-version>1.6.6</springdoc-version>
+        <liquibase-version>4.9.1</liquibase-version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring-verison}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>${spring-verison}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>${spring-verison}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok-verison}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgres-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-            <version>${liquibase-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-            <version>${springdoc-version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                    <artifactId>jackson-core</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
+    <dependencyManagement>
+        <dependencies>
+            <!-- ====================================================== -->
+            <!-- ===================== SPRING BOOT ==================== -->
+            <!-- ====================================================== -->
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-verison}</version>
-                <configuration>
-                    <mainClass>ch.sven.Application</mainClass>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-        <finalName>todo-backend</finalName>
-    </build>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>2.6.6</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- ====================================================== -->
+            <!-- =================== MESSAGE MODULES ================== -->
+            <!-- ====================================================== -->
+            <dependency>
+                <groupId>ch.sven</groupId>
+                <artifactId>todo-application</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.sven</groupId>
+                <artifactId>todo-domain</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.sven</groupId>
+                <artifactId>todo-infrastructure</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <!-- ====================================================== -->
+            <!-- ===================== UTILITAIRES ==================== -->
+            <!-- ====================================================== -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.22</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+
+            <!-- ====================================================== -->
+            <!-- ======================= DATABASE ===================== -->
+            <!-- ====================================================== -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-core</artifactId>
+                <version>4.9.1</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
