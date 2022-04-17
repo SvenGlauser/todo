@@ -18,8 +18,3 @@ spring:
     username: postgres
     password: Admlocal1
     driver-class-name: org.postgresql.Driver
-
-  security:
-    user:
-      name: default
-      password: 90575e69-6fe9-4c72-93d4-4628f9c70c28
