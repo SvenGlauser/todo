@@ -23,6 +23,7 @@ public class UtilisateurServiceApplicationImpl implements UtilisateurServiceAppl
     }
 
     @Override
+    @PreAuthorize("@securityMethods.isLoggedUser(#username)")
     public UtilisateurDtoLight recupererUtilisateur(String username) {
         return Optional.ofNullable(utilisateurService.recupererUtilisateur(username)).map(UtilisateurDtoLight::new).orElse(null);
     }
