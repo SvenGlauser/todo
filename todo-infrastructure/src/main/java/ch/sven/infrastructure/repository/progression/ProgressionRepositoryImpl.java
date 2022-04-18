@@ -25,6 +25,6 @@ public class ProgressionRepositoryImpl implements ProgressionRepository {
 
     @Override
     public Progression sauvegarderProgression(Progression progression) {
-        return Optional.of(progressionRepository.save(Optional.of(progression).map(ProgressionEntity::new).orElse(null))).map(ProgressionEntity::toDomaine).orElse(new Progression());
+        return Optional.of(progressionRepository.save(Optional.of(progression).map(ProgressionEntity::new).orElse(null))).map(ProgressionEntity::toDomaine).orElse(null);
     }
 }

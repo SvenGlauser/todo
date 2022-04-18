@@ -25,6 +25,6 @@ public class TacheRepositoryImpl implements TacheRepository {
 
     @Override
     public Tache sauvegarderTache(Tache tache) {
-        return Optional.of(tacheRepository.save(Optional.of(tache).map(TacheEntity::new).orElse(null))).map(TacheEntity::toDomaine).orElse(new Tache());
+        return Optional.of(tacheRepository.save(Optional.of(tache).map(TacheEntity::new).orElse(null))).map(TacheEntity::toDomaine).orElse(null);
     }
 }

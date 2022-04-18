@@ -13,6 +13,13 @@ public interface UtilisateurService {
     List<Utilisateur> recupererUtilisateurs();
 
     /**
+     * Récupérer un utilisateur
+     * @param username Nom de l'utilisateur à retrouver
+     * @return Un utilisateur
+     */
+    Utilisateur recupererUtilisateur(String username);
+
+    /**
      * Sauvegarder un utilisateur
      * @param utilisateur Utilisateur à sauvegarder
      * @return Utilisateur qui à été sauvegarder

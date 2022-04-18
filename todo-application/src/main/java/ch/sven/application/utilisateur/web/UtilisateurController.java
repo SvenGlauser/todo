@@ -26,6 +26,15 @@ public class UtilisateurController {
     }
 
     /**
+     * Récupérer un utilisateur
+     * @return Un UtilisateurDto
+     */
+    @GetMapping("/retrieve")
+    public UtilisateurDtoLight recupererUtilisateur(@RequestParam String username) {
+        return utilisateurServiceApplication.recupererUtilisateur(username);
+    }
+
+    /**
      * Créer un utilisateur
      * @param utilisateurDto L'utilisateur à créer
      * @return L'utilisateur créé

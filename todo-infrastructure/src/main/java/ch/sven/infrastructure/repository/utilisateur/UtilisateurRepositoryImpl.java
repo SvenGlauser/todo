@@ -24,7 +24,12 @@ public class UtilisateurRepositoryImpl implements UtilisateurRepository {
     }
 
     @Override
+    public Utilisateur recupererUtilisateur(String username) {
+        return Optional.of(utilisateurRepository.findUser(username)).map(UtilisateurEntity::toDomaine).orElse(null);
+    }
+
+    @Override
     public Utilisateur sauvegarderUtilisateur(Utilisateur utilisateur) {
-        return Optional.of(utilisateurRepository.save(Optional.of(utilisateur).map(UtilisateurEntity::new).orElse(null))).map(UtilisateurEntity::toDomaine).orElse(new Utilisateur());
+        return Optional.of(utilisateurRepository.save(Optional.of(utilisateur).map(UtilisateurEntity::new).orElse(null))).map(UtilisateurEntity::toDomaine).orElse(null);
     }
 }

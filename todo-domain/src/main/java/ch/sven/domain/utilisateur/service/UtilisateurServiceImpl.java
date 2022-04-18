@@ -17,6 +17,11 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     }
 
     @Override
+    public Utilisateur recupererUtilisateur(String username) {
+        return utilisateurRepository.recupererUtilisateur(username);
+    }
+
+    @Override
     public Utilisateur sauvegarderUtilisateur(Utilisateur utilisateur) {
         return utilisateurRepository.sauvegarderUtilisateur(utilisateur);
     }

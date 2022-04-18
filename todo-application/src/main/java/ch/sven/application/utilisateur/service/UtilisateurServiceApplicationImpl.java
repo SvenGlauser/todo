@@ -4,6 +4,7 @@ import ch.sven.application.utilisateur.dto.UtilisateurDto;
 import ch.sven.application.utilisateur.dto.UtilisateurDtoLight;
 import ch.sven.domain.utilisateur.service.UtilisateurService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +20,11 @@ public class UtilisateurServiceApplicationImpl implements UtilisateurServiceAppl
     @Override
     public List<UtilisateurDtoLight> recupererUtilisateurs() {
         return utilisateurService.recupererUtilisateurs().stream().map(UtilisateurDtoLight::new).collect(Collectors.toList());
+    }
+
+    @Override
+    public UtilisateurDtoLight recupererUtilisateur(String username) {
+        return Optional.ofNullable(utilisateurService.recupererUtilisateur(username)).map(UtilisateurDtoLight::new).orElse(null);
     }
 
     @Override
